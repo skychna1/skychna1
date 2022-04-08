@@ -126,7 +126,7 @@ mv cloudflared123 .cloudflared
 	# _thread.start_new_thread(start_n, ( 1 ,) );
 
 # 启动反向代理服务
-_thread.start_new_thread(start_proxy, ( 1 ,) );
+# _thread.start_new_thread(start_proxy, ( 1 ,) );
 
 
 
