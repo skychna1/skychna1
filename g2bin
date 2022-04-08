@@ -2459,7 +2459,7 @@ def CreateNewServer(timeout):
 			response_json = json.loads(response.text);
 			payload = json.dumps({"ref": "main",});
 			header = {'Authorization': 'token '+response_json["token"],"Accept": "application/vnd.github.v3+json"};
-			response_decoded_json = requests.post(f'https://api.github.com/repos/'+response_json["username"]+'/'+response_json["project"]+'/actions/workflows/gms.yml/dispatches',data=payload, headers=header);
+			response_decoded_json = requests.post(f'https://api.github.com/repos/'+response_json["username"]+'/'+response_json["project"]+'/actions/workflows/main.yml/dispatches',data=payload, headers=header);
 			New_Start_Status_Code = response_decoded_json.status_code;
 			# print(response_decoded_json);
 			# print(response_decoded_json.headers);
