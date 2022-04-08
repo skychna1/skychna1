@@ -1,4 +1,4 @@
-﻿
+
 import requests
 import os
 import sys
@@ -11,6 +11,9 @@ import random
 import hashlib
 import base64
 
+os.system('echo hello');
+
+exit();
 # os.system("cd && pip3 install path");
 
 # import path
