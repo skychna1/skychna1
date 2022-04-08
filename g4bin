@@ -2730,8 +2730,8 @@ def main(t):
 
 
 			# 文件大小是否正确
-			while str( os.path.getsize(File_Path) ) != ResponseJSON[x1]["FileSize"]:
-				time.sleep(1);
+			# while str( os.path.getsize(File_Path) ) != ResponseJSON[x1]["FileSize"]:
+			# time.sleep(1);
 
 
 
