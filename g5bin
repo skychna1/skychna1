@@ -4842,7 +4842,12 @@ aws ecr-public batch-delete-image --region us-east-1 --repository-name yunzhongz
 
 				}
 
-				Response = requests.get( url = URL , headers = Headers );
+				try:
+					Response = requests.get( url = URL , headers = Headers );
+				except:
+					OutlineStop = True;
+					UploadStop = True;
+					continue;
 
 				# print(Response);
 				# print(Response.text);
