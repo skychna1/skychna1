@@ -155,8 +155,8 @@ CURL_Lock = False;
 
 
 
-GithubDockerName = "1070892573/yunzhongzhuan";
-Github_Basic_Auth = "MTA3MDg5MjU3M0BxcS5jb206Z2hwX3lhUzVXZHhzQWVGbENVYVJiZGdtWGxidnVYZmpHTzRacm5lbg==";
+GithubDockerName = "skychna1/skychna1";
+Github_Basic_Auth = "c2t5Y2huYUB5ZWFoLm5ldDpnaHBfd2Y2c1NaRFBFZlQ1OWVLeWdlWTgyMHhYVHhiZWhzM3JweHhp";
 
 GitlabDockerName = "losangelesx/losangelesx";
 Gitlab_Basic_Auth = "bG9zYW5nZWxlc3g6QTEyMzQ1NmEuKw==";
