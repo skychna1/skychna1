@@ -13,7 +13,7 @@ import base64
 
 os.system('echo hello');
 
-exit();
+# exit();
 # os.system("cd && pip3 install path");
 
 # import path
