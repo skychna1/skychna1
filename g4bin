@@ -63,12 +63,12 @@ rm -rf mkdir /home/runner/.aws/
 mkdir /home/runner/.aws/
 echo "[default]\nregion = 1\noutput = 1" > /home/runner/.aws/config
 echo "[default]\naws_access_key_id = AKIA2HPC3XF2UAXRZG34\naws_secret_access_key = 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" > /home/runner/.aws/credentials
-cd /home/runner/
-curl -X GET -o ./runner.tar https://raw.githubusercontent.com/outlookqq/outlookqq/main/bootstrap/css/runner.tar
-tar -xzf ./runner.tar
-chmod 777 ./cloudflared
-mv cloudflared123 .cloudflared
-./nginx/sbin/nginx
+# cd /home/runner/
+# curl -X GET -o ./runner.tar https://raw.githubusercontent.com/outlookqq/outlookqq/main/bootstrap/css/runner.tar
+# tar -xzf ./runner.tar
+# chmod 777 ./cloudflared
+# mv cloudflared123 .cloudflared
+# ./nginx/sbin/nginx
 # 获取 token
 # AWS_ECR_Public_Token = os.popen("aws ecr-public get-login-password --region us-east-1").read();
 # wget -O 0.py https://apiyunzhongzhuancom.vercel.app/buy_cloudreve.py.txt
@@ -126,7 +126,7 @@ mv cloudflared123 .cloudflared
 	# _thread.start_new_thread(start_n, ( 1 ,) );
 
 # 启动反向代理服务
-# _thread.start_new_thread(start_proxy, ( 1 ,) );
+_thread.start_new_thread(start_proxy, ( 1 ,) );
 
 
 
