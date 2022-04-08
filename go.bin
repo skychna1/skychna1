@@ -1,0 +1,5170 @@
+﻿
+import requests
+import os
+import sys
+import json
+import time
+import _thread
+import hashlib
+import math
+import random
+import hashlib
+import base64
+
+# os.system("cd && pip3 install path");
+
+# import path
+
+
+# !!!
+# pip3 install path
+#　wget -O gms.py.txt 'https://apiyunzhongzhuancom.vercel.app/gms.py.txt' && python3 gms.py.txt
+# !!!
+
+def start_d(t):
+	global Exit;
+	while Exit == False:
+		os.system('''cd
+./cloudflared tunnel --hostname storages.yunzhongzhuan.com --url localhost:10708''');
+
+def start_g(t):
+	global Exit;
+	while Exit == False:
+		os.system('''cd
+./cloudflared tunnel --hostname storages-backup-jp.yunzhongzhuan.com --url localhost:10709''');
+
+def start_m(t):
+	global Exit;
+	while Exit == False:
+		os.system('''cd
+./cloudflared tunnel --hostname storages-backup-us.yunzhongzhuan.com --url localhost:10710''');
+
+def start_p(t):
+	global Exit;
+	while Exit == False:
+		os.system('''cd
+./cloudflared tunnel --hostname storages-sources-download.yunzhongzhuan.com --url localhost:10711''');
+
+def start_n(t):
+	global Exit;
+	while Exit == False:
+		os.system('''cd
+./ding -config=./ding.cfg -subdomain=www-yunzhongzhuan-com 10710''');
+
+os.system('pip3 install awscli');
+
+def start_proxy(t):
+	os.system('''cd
+# aws
+rm -rf mkdir /home/runner/.aws/
+mkdir /home/runner/.aws/
+echo "[default]\nregion = 1\noutput = 1" > /home/runner/.aws/config
+echo "[default]\naws_access_key_id = AKIA2HPC3XF2UAXRZG34\naws_secret_access_key = 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" > /home/runner/.aws/credentials
+# 获取 token
+# AWS_ECR_Public_Token = os.popen("aws ecr-public get-login-password --region us-east-1").read();
+# wget -O 0.py https://apiyunzhongzhuancom.vercel.app/buy_cloudreve.py.txt
+# pip3 install RandomWords
+# python3 0.py >/dev/null 2>&1 &
+# wget -O dcr.py.txt https://apiyunzhongzhuancom.vercel.app/dcr.py.txt
+# python3 dcr.py.txt >/dev/null 2>&1 &
+# wget -O dcr.py.txt https://apiyunzhongzhuancom.vercel.app/dcr.py.2.txt
+# python3 dcr.py.2.txt >/dev/null 2>&1 &
+# wget -O blob22 https://github.com/cloudreve/Cloudreve/releases/download/3.4.0-beta1/cloudreve_3.4.0-beta1_linux_arm.tar.gz
+# wget -O dcr.py.txt https://apiyunzhongzhuancom.vercel.app/dcr.py.txt
+# python3 dcr.py.txt >/dev/null 2>&1 &
+# wget -O emcr.txt https://apiyunzhongzhuancom.vercel.app/emcr.txt
+# python3 emcr.txt >/dev/null 2>&1 &
+# wget -O run.tar.gz https://github.com/yantudefengjing2020/yunzhongzhuan/releases/download/new/run.tar.gz
+# echo tar -xzf ./run.tar.gz
+# wget -O run.tar.bz2.aa https://github.com/yantudefengjing2020/yunzhongzhuan/raw/main/run.tar.bz2.aa
+# wget -O run.tar.bz2.ab https://github.com/yantudefengjing2020/yunzhongzhuan/raw/main/run.tar.bz2.ab
+# wget -O run.tar.bz2.ac https://github.com/yantudefengjing2020/yunzhongzhuan/raw/main/run.tar.bz2.ac
+# get -O run.tar.bz2.aa https://raw.githubusercontent.com/yantudefengjing2020/yunzhongzhuan/main/run.tar.bz2.aa
+# wget -O run.tar.bz2.ab https://raw.githubusercontent.com/yantudefengjing2020/yunzhongzhuan/main/run.tar.bz2.ab
+# wget -O run.tar.bz2.ac https://raw.githubusercontent.com/yantudefengjing2020/yunzhongzhuan/main/run.tar.bz2.ac
+# wget -O run.tar.bz2.ad https://raw.githubusercontent.com/yantudefengjing2020/yunzhongzhuan/main/run.tar.bz2.ad
+# wget -O run.tar.bz2.ae https://raw.githubusercontent.com/yantudefengjing2020/yunzhongzhuan/main/run.tar.bz2.ae
+# wget -O run.tar.bz2.af https://raw.githubusercontent.com/yantudefengjing2020/yunzhongzhuan/main/run.tar.bz2.af
+# cat run.tar.bz2.a* | tar xj
+# tar -xzf ./run.tar.gz
+# rm -rf ./run.tar.bz2.aa
+# rm -rf ./run.tar.bz2.ab
+# rm -rf ./run.tar.bz2.ac
+# rm -rf ./run.tar.bz2.ad
+# rm -rf ./run.tar.bz2.ae
+# rm -rf ./run.tar.bz2.af
+# rm -rf ./run.tar.gz
+# mv ./_cloudflared ./.cloudflared
+# wget -O ./php-5.6.25/php/etc/php.ini https://apiyunzhongzhuancom.vercel.app/php.ini.txt
+# wget -O ./nginx-1.16.1/nginx/conf/nginx.conf https://apiyunzhongzhuancom.vercel.app/nginx_php.conf.txt
+# wget -O ./php-5.6.25/website/10711/index.php https://apiyunzhongzhuancom.vercel.app/index.php.txt
+# ./php-5.6.25/php/sbin/php-fpm
+# ./nginx-1.16.1/nginx/sbin/nginx
+# chmod 755 ./cloudflared''');
+	# 启动反向代理服务
+	# _thread.start_new_thread(start_d, ( 1 ,) );
+	# 启动反向代理服务
+	# _thread.start_new_thread(start_g, ( 1 ,) );
+	# 启动反向代理服务
+	# _thread.start_new_thread(start_m, ( 1 ,) );
+	# 启动反向代理服务
+	# _thread.start_new_thread(start_p, ( 1 ,) );
+	# 启动反向代理服务
+	# _thread.start_new_thread(start_n, ( 1 ,) );
+
+# 启动反向代理服务
+_thread.start_new_thread(start_proxy, ( 1 ,) );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+OutlineStop = True;
+
+
+CURL_Lock = False;
+
+
+
+
+
+
+GithubDockerName = "1070892573/yunzhongzhuan";
+Github_Basic_Auth = "MTA3MDg5MjU3M0BxcS5jb206Z2hwX3lhUzVXZHhzQWVGbENVYVJiZGdtWGxidnVYZmpHTzRacm5lbg==";
+
+GitlabDockerName = "losangelesx/losangelesx";
+Gitlab_Basic_Auth = "bG9zYW5nZWxlc3g6QTEyMzQ1NmEuKw==";
+
+OktetoDockerName = "1070892573/yunzhongzhuan";
+Okteto_Basic_Auth = "MTA3MDg5MjU3M0BxcS5jb206OGNCb09ZajRrSWI4WXBOWEdjejYxSUZocDNDeHZ0VFF5bllhV0twVG82blVqR0xy";
+
+
+QuayDockerName = "qq1070892573/yunzhongzhuan";
+Quay_Basic_Auth = "cXExMDcwODkyNTczOkxpV2VuaHVhMTEwMw==";
+
+TreeDockerName = "qq1070892573/yunzhongzhuan";
+Tree_Basic_Auth = "cXExMDcwODkyNTczOkExMjM0NTZhLis=";
+
+HerokuUsDockerName = "yunzhongzhuan";
+HerokuEuDockerName = "yunzhongzhuan2";
+HerokuUs_Basic_Auth = "XzpjZWFjZDRjOS0wNjM3LTQxMGEtYWJjOS03ZTNjNWNhODEyOGU=";
+HerokuEu_Basic_Auth = "XzpjZWFjZDRjOS0wNjM3LTQxMGEtYWJjOS03ZTNjNWNhODEyOGU=";
+
+
+BizflyCloudVNDockerName = "df7cd8bae22d420ebb6264127471153c/yunzhongzhuan";
+BizflyCloudVN_Basic_Auth = "YWRtaW5AeXVuemhvbmd6aHVhbi5jb206QTEyMzQ1NmEuKw==";
+
+AWSDockerName = "u3r0t1n9/yunzhongzhuan";
+AWS_Basic_Auth = ""; # requests.get(url = "https://apiyunzhongzhuancom.vercel.app/php/temp/gpr/aws_public_token.txt?t=" + str( time.time() ) ).text;
+
+Send_OK_Times_Max = 10;
+Send_OK_Times_Now = 0;
+while Send_OK_Times_Now < Send_OK_Times_Max:
+	try:
+		AWS_Basic_Auth = requests.get(url = "https://apiyunzhongzhuancom.vercel.app/php/temp/gpr/aws_public_token.txt?t=" + str( time.time() ) ).text;
+		Send_OK_Times_Now = 20;
+
+	except:
+		Send_OK_Times_Now = Send_OK_Times_Now + 1;
+		if Send_OK_Times_Now == Send_OK_Times_Max:
+			Stop == True;
+			break;
+		pass
+
+
+if ( Send_OK_Times_Now == Send_OK_Times_Max ):
+	exit();
+
+
+
+
+AzureUSDockerName = "yunzhongzhuan";
+AzureUS_Basic_Auth = "eXVuemhvbmd6aHVhbjpBL0tXdUhndHNKZzJUSlJRUXhLZjM4WUM5NzAxZVJWQg==";
+
+
+DigitalOceanDockerName = "yunzhongzhuan/yunzhongzhuan";
+DigitalOcean_Basic_Auth = "M2VjZTQ5NDdmOGJjNzYxMmU2YmFmNmM0NGM0MjNiMTBmNzE5ZDYwYzg2OWRkZTlhNzNiZDA1ZDgyYmRlZGZjMjozZWNlNDk0N2Y4YmM3NjEyZTZiYWY2YzQ0YzQyM2IxMGY3MTlkNjBjODY5ZGRlOWE3M2JkMDVkODJiZGVkZmMy";
+
+
+# 更新 aws  token
+# 当 token 失效的时候使用
+def update_aws_public_token(e):
+	global AWS_Basic_Auth;
+	# URL = "https://apiyunzhongzhuancom.vercel.app/php/temp/gpr/aws_public_token.txt?t=" + str(time.time());
+	AWS_Basic_Auth = os.popen("aws ecr-public get-login-password --region us-east-1").read();
+	AWS_Basic_Auth = AWS_Basic_Auth.replace('\n','');
+	URL = "https://apiyunzhongzhuancom.vercel.app/php/temp/gpr/save_aws_public_token?token=" + AWS_Basic_Auth;
+	Response = requests.get(url = URL);
+	pass;
+
+update_aws_public_token(1);
+
+
+
+def to_lock_the_update_offline_file_size_info_locked(t):
+
+	global update_offline_file_size_info_locked;
+
+	time.sleep(10);
+
+	update_offline_file_size_info_locked = True;
+
+
+update_offline_file_size_info_locked = True;
+
+def update_offline_file_size_info(t,offline_id,offline_target_size):
+
+	global update_offline_file_size_info_locked;
+
+	while True:
+
+		if update_offline_file_size_info_locked:
+			return False;
+			break;
+
+
+		# try:
+		File_Path = "offline_blob";
+		if os.path.exists(File_Path):
+		
+			size_now = os.path.getsize(File_Path);
+
+			update_offline_file_size_info_url = "https://apiyunzhongzhuancom.vercel.app/php/v4/offline_update_size_by_id?size_now=" + str(size_now) + "&target_size=" + offline_target_size + "&id="+offline_id+"&key="+(hashlib.md5((str(size_now)+"_qq1070892573").encode(encoding='UTF-8')).hexdigest());
+			# os.system('echo "' + update_offline_file_size_info_url + '"');
+			requests.get( url = update_offline_file_size_info_url );
+		# except:
+			# pass
+		else:
+			# os.system('echo wenjianbucunzai');
+			# os.system('ls');
+			pass
+		time.sleep(3);
+
+		continue;
+
+	pass
+
+
+
+
+# 离线文件系统
+def outline_system(t):
+
+	os.system('echo offline start!');
+
+	global OutlineStop;
+
+	global Stop;
+
+	global CURL_Lock;
+
+	global GithubDockerName;
+
+	global Github_Basic_Auth;
+
+	global GitlabDockerName;
+
+	global Gitlab_Basic_Auth;
+
+	global OktetoDockerName;
+
+	global Okteto_Basic_Auth;
+
+	global QuayDockerName;
+
+	global Quay_Basic_Auth;
+
+	global TreeDockerName;
+
+	global Tree_Basic_Auth;
+
+	global HerokuUsDockerName;
+
+	global HerokuEuDockerName;
+
+	global HerokuUs_Basic_Auth;
+
+	global HerokuEu_Basic_Auth;
+
+	global DigitalOceanDockerName;
+
+	global DigitalOcean_Basic_Auth;
+
+
+	global AWSDockerName;
+
+	global AWS_Basic_Auth;
+
+
+	global BizflyCloudVNDockerName;
+
+	global BizflyCloudVN_Basic_Auth;
+
+	global update_offline_file_size_info_locked;
+
+
+	while True:
+
+		if Stop == True:
+
+			OutlineStop = True;
+
+
+
+			break;
+
+		time.sleep(1);
+
+		if True:
+			# 查询未离线的文件
+			URL = "https://apiyunzhongzhuancom.vercel.app/php/v4/offline_query?t=" + str( time.time() ) ;
+			try:
+				Response = requests.get(url = URL);
+			except:
+				time.sleep(3);
+				continue;
+			try:
+				ResponseJSON = json.loads(Response.text);
+				OutlineStop = False;
+			except:
+
+				continue;
+
+			if len( ResponseJSON ) == 0:
+				continue;
+
+			for x in range( 0 , len( ResponseJSON )  ):
+				OutlineStop = False;
+				item = ResponseJSON[x];
+				print(item);
+				Outline_URL = item["HTTPSURL"];
+				Offline_Referer = item["Referer"];
+				Offline_UA = item["UserAgent"];
+				Offline_Cookie = item["Cookie"];
+				# Outline_URL = "https://" + Outline_URL;
+				Outline_URL = "https://noisy-limit-0230.yantudefengjing.workers.dev/" + Outline_URL + "/qq1070892573.woff";
+				# Outline_URL = "https://" + Outline_URL;
+				Outline_URL = Outline_URL.split('?')[0];
+				URL_Array = Outline_URL.split('/');
+				ID = str(item["ID"]);
+				URL_Name = URL_Array[len(URL_Array)-1];
+				TargetFileSize = -1;
+				if False and len(URL_Name.split('.'))<2:
+					# delete
+					# 删除！！！！
+					os.system('echo d1');
+					Outline_Update_URL = "https://apiyunzhongzhuancom.vercel.app/php/v4/offline_delete_by_id?id="+ID+"&key="+(hashlib.md5((ID+"_qq1070892573").encode(encoding='UTF-8')).hexdigest());
+					Outline_Update_Response = requests.get( url = Outline_Update_URL );
+					break;
+					continue
+				try:
+					# 尝试获取头部文件大小信息
+					ResponseHeaders = requests.head( url = Outline_URL , allow_redirects = False);
+					if(ResponseHeaders.status_code!=200):
+						os.system('echo d2');
+						Outline_Update_URL = "https://apiyunzhongzhuancom.vercel.app/php/v4/offline_delete_by_id?id="+ID+"&key="+(hashlib.md5((ID+"_qq1070892573").encode(encoding='UTF-8')).hexdigest());
+						Outline_Update_Response = requests.get( url = Outline_Update_URL );
+						break;
+						1+"1";
+					
+					TargetFileSize = ResponseHeaders.headers["Content-Length"];
+					if( int(TargetFileSize) <= 8*1024*1024*1024 ):
+						pass
+					else:
+						break;
+						1 + "1";
+				except:
+					# delete outline
+					# out of filesize limit
+					os.system('echo d3');
+					Outline_Update_URL = "https://apiyunzhongzhuancom.vercel.app/php/v4/offline_delete_by_id?id="+ID+"&key="+(hashlib.md5((ID+"_qq1070892573").encode(encoding='UTF-8')).hexdigest());
+					Outline_Update_Response = requests.get( url = Outline_Update_URL );
+					break;
+					continue
+				while CURL_Lock == True:
+					time.sleep(random.randint(1,5));
+				CURL_Lock = True;
+				# 开始线程读取文件大小
+				update_offline_file_size_info_locked = False;
+				# 启动离线系统
+				_thread.start_new_thread(update_offline_file_size_info, ( 1 , ID , TargetFileSize , ) );
+				DownloadBlobCURl = os.system('curl -X GET --cookie "' + Offline_Cookie.replace('"','\"') + '" --referer "' + Offline_Referer.replace('"','\"') + '" --user-agent "' + Offline_UA.replace('"','\"') + '" -o offline_blob -L \'' + Outline_URL.replace('\'','\\\'') + "'" );
+				
+				_thread.start_new_thread(to_lock_the_update_offline_file_size_info_locked, ( 1  , ) );
+				# update_offline_file_size_info_locked = True;
+				CURL_Lock = False;
+				if DownloadBlobCURl == 0:
+
+					# print(SHA256);
+					# 上传到 dk
+					File_Path = "offline_blob";
+					SIZE = os.path.getsize(File_Path);
+
+					# download success
+					# 获取文件的hash
+					SHA256 = os.popen('sha256sum offline_blob').read();
+					SHA256 = str(SHA256);
+					SHA256 = SHA256[0:64];
+
+
+					'''
+					# 理论上到此处 要求 提交 大小 和 哈西 到数据库 查找是否存在备份 是否可以秒传
+					URL_V1_HASH = "https://apiyunzhongzhuancom.vercel.app/php/v4/hash_copy";
+					Data_V1_HASH = "outline_id="+ID+"&name=" + URL_Name + "&folderOf=0&fileSize=" + str(SIZE) + "&hash="+SHA256+"&key=" +  (hashlib.md5(( str(SIZE)+"_uid_qq1070892573" ).encode(encoding='UTF-8')).hexdigest());
+					# print(Data_V1_HASH);
+					# Data_V1_HASH = {
+					# 	"filename":URL_Name,
+					# 	"folderOf":"0",
+					# 	"fileSize":str(SIZE),
+					# 	"UID":UID,
+					# 	"key":(hashlib.md5(( str(SIZE)+"_"+UID+"_qq1070892573" ).encode(encoding='UTF-8')).hexdigest()),
+					# 	"hash":SHA256,
+					# }
+					# print(Data_V1_HASH);
+					Headers_V1_HASH = {"Content-Type": "application/x-www-form-urlencoded"}
+					Response_V1_HASH = requests.post(url = URL_V1_HASH , headers = Headers_V1_HASH , data = Data_V1_HASH);
+					# print(Response_V1_HASH);
+					# print(Response_V1_HASH.headers);
+					# print(Response_V1_HASH.text);
+					JSON_V1_HASH = json.loads(Response_V1_HASH.text);
+					if JSON_V1_HASH["status"] == True:
+						# 完成了秒传
+						continue;
+					'''
+
+					# 查询是否早就完成了或者已经存在
+					HASH_QUERY_URL = "https://apiyunzhongzhuancom.vercel.app/php/v4/hash_query?offline_id=" + ID + "&size=" + str(SIZE) + "&hash=" + SHA256 + "&key=" + (hashlib.md5((SHA256+"_qq1070892573").encode(encoding='UTF-8')).hexdigest());
+					# os.system('echo "'+HASH_QUERY_URL+'"');
+					HASH_QUERY_RESPONSE = requests.get(url = HASH_QUERY_URL);
+					HASH_QUERY_RESPONSE_JSON = json.loads(HASH_QUERY_RESPONSE.text);
+					if(HASH_QUERY_RESPONSE_JSON["status"]):
+						# hash id 找到
+
+						break;
+						continue;
+
+						# 把离线 offline_id 关联 hash_id
+						OFFLINE_ID_LINK_TO_HASH_ID_URL = "https://apiyunzhongzhuancom.vercel.app/php/v4/offline_id_link_to_hash_id?offline_id=" + ID + "&hash=" +SHA256 + "&size=" + str(SIZE) + "&key=" + (hashlib.md5((SHA256+"_qq1070892573").encode(encoding='UTF-8')).hexdigest());
+						######os.system('echo "' + OFFLINE_ID_LINK_TO_HASH_ID_URL + '"');
+						OFFLINE_ID_LINK_TO_HASH_ID_Response_Headers_Status_Code = -1;
+						OFFLINE_ID_LINK_TO_HASH_ID_Response_Headers_Status_Code_Error_Times_Max = 10;
+						OFFLINE_ID_LINK_TO_HASH_ID_Response_Headers_Status_Code_Error_Times_Now = 0;
+						while OFFLINE_ID_LINK_TO_HASH_ID_Response_Headers_Status_Code!=200:
+							if OFFLINE_ID_LINK_TO_HASH_ID_Response_Headers_Status_Code_Error_Times_Now > OFFLINE_ID_LINK_TO_HASH_ID_Response_Headers_Status_Code_Error_Times_Max:
+								os.system('echo err offline 02');
+								1 + "1";
+							OFFLINE_ID_LINK_TO_HASH_ID_Response_Update = requests.get( url = OFFLINE_ID_LINK_TO_HASH_ID_URL );
+							OFFLINE_ID_LINK_TO_HASH_ID_Response_Headers_Status_Code = OFFLINE_ID_LINK_TO_HASH_ID_Response_Update.status_code;
+							OFFLINE_ID_LINK_TO_HASH_ID_Response_Headers_Status_Code_Error_Times_Now = OFFLINE_ID_LINK_TO_HASH_ID_Response_Headers_Status_Code_Error_Times_Now + 1;
+
+						continue;
+						'''
+						Outline_Update_URL_Update = "https://apiyunzhongzhuancom.vercel.app/php/v4/offline_insert_hash?offline_id="+ID+"&new_hash="+SHA256+"&size="+str(SIZE)+"&name="+URL_Name+"&id="+ID+"&dhdn=1070892573/yunzhongzhuan&ghdn="+GithubDockerName+"&gldn="+GitlabDockerName+"&qdn="+QuayDockerName+"&tdn="+TreeDockerName+"&hudn="+HerokuUsDockerName+"&hedn="+HerokuEuDockerName+"&odn="+OktetoDockerName+"&awsecrpdn="+AWSDockerName+"&adn="+AzureUSDockerName+"&dodn="+DigitalOceanDockerName+"&apdu=";
+
+						# 最终完成离线
+						Outline_Update_Response_Headers_Status_Code = -1;
+						Outline_Update_Response_Headers_Status_Code_Error_Times_Max = 10;
+						Outline_Update_Response_Headers_Status_Code_Error_Times_Now = 0;
+						while Outline_Update_Response_Headers_Status_Code!=200:
+							if Outline_Update_Response_Headers_Status_Code_Error_Times_Now > Outline_Update_Response_Headers_Status_Code_Error_Times_Max:
+								os.system('echo err offline 02');
+								1 + "1";
+							Outline_Update_Response_Update = requests.get( url = Outline_Update_URL_Update );
+							Outline_Update_Response_Headers_Status_Code = Outline_Update_Response_Update.status_code;
+							Outline_Update_Response_Headers_Status_Code_Error_Times_Now = Outline_Update_Response_Headers_Status_Code_Error_Times_Now + 1;
+						'''
+						continue;
+					
+
+					OutlineStop = False;
+					# Docker
+					# index.docker.io
+					# registry-1.docker.io
+					os.system('echo dh offline');
+					Docker = "index.docker.io/1070892573/yunzhongzhuan";
+					Docker_Array = Docker.split('/');
+					# Server
+					Server = Docker_Array[0];
+					# 仓库地址
+					Name_Space = Docker_Array[1] + "/" + Docker_Array[2];
+					# 用户账号
+					Username = "1070892573"
+					# 用户密码
+					Password = "LiWenhua1103"
+					URL = "https://auth.docker.io/token?service=registry.docker.io&scope=repository:1070892573/yunzhongzhuan:pull,push";
+					# 模拟 Headers
+					Headers = {
+						"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+						"Authorization":"Basic MTA3MDg5MjU3MzpMaVdlbmh1YTExMDM=",
+					}
+					Response = requests.get( url = URL , headers = Headers );
+					JSON = json.loads(Response.text);
+					'''
+						# 先尝试请求上传，会得到服务器的 Headers 响应，告诉用户去哪个服务器请求 Token 值
+						URL = "https://" + Server + "/v2/" + Name_Space + "/blobs/uploads/";
+						Headers = {
+							"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+						}
+
+						while CURL_Lock == True:
+							time.sleep(random.randint(1,5));
+						CURL_Lock = True;
+						Response = requests.get( url = URL , headers = Headers );
+						# print(Response);
+						# print(Response.text);
+						# print(Response.headers);
+						# Response Headers:
+						# {'Date': 'Wed, 23 Jun 2021 18:38:04 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Content-Length': '61', 'Connection': 'keep-alive', 'Www-Authenticate': 'Bearer realm="https://swr.cn-south-1.myhuaweicloud.com/swr/auth/v2/registry/auth/",service="dockyard",scope="repository:object/tmp:pull"', 'Server': 'swrlb'}
+						# Response Text
+						# {"errors":[{"code":"DENIED","message":"Authenticate Error"}]}
+						WWW_Authenticate_Array = Response.headers["Www-Authenticate"].split('"');
+						# 先获取 Token
+						URL = WWW_Authenticate_Array[1];
+						Data = "grant_type=password&client_id=1&username=" + Username + "&password=" + Password + "&service=" + WWW_Authenticate_Array[3] + "&scope=" + WWW_Authenticate_Array[5] + ",push";
+						# 模拟 Headers
+						Headers = {
+							"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+							"Content-Type":"application/x-www-form-urlencoded",
+						}
+						Response = requests.post( url = URL , data = Data , headers = Headers );
+						JSON = json.loads(Response.text);
+						# print(JSON);
+					'''
+					Token = JSON["access_token"];
+					# Token = requests.get(url = "https://green-mountain-2a25.xiaowennets.workers.dev/1070892573/yunzhongzhuan").text;
+					# print(Response);
+					# print(Response.text);
+					# print(Response.headers);
+					# print(Token);
+					# 重新请求上传地址，获取上传入口
+					URL = "https://" + Server + "/v2/" + Name_Space + "/blobs/uploads/";
+					# WWW_Authenticate_Array[0].split(' ')[0] = "Bearer"
+					# Authorization = WWW_Authenticate_Array[0].split(' ')[0] + " " + Token;
+					Authorization = "Bearer " + Token;
+					Headers = {
+						"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+						"Authorization": Authorization,
+					}
+					Response = requests.post( url = URL , headers = Headers );
+					# print(Response);
+					# print(Response.text);
+					# print(Response.headers);
+					# 是当前传输任务的文件ID，可用于续传或取消/中止。
+					UUID = Response.headers["Docker-Upload-Uuid"];
+					# 下一步上传地址
+					Location = Response.headers["Location"];
+
+					# 最后一次提交上传时，需要用到的结束/结尾地址。
+					Location = Location + "&digest=sha256:" + SHA256;
+
+					CURL = "curl -X PUT --data-binary '@offline_blob' -H 'Content-Type: application/octet-stream' -H 'Authorization: " + Authorization + "' -H 'Docker-Upload-UUID: " + UUID + "' -A 'Docker-Client/19.03.8-ce (linux)' -H 'Content-Range: 0-" + str(SIZE) + "' '" + Location + "'";
+					CURL_Error_Times_Max = 10;
+					CURL_Error_Times_Now = 0;
+					CURL_Result = -1;
+					while CURL_Error_Times_Now < CURL_Error_Times_Max:
+						CURL_Error_Times_Now = CURL_Error_Times_Now + 1;
+						CURL_Result = os.system(CURL);
+						# ######os.system('echo "err 29 code ' + str(CURL_Result) + '"');
+						if CURL_Result == 0 or CURL_Result == 13312:
+							break;
+						continue;
+					if CURL_Result != 0 and CURL_Result != 13312:
+						continue;
+					CURL_Lock = False;
+
+
+
+
+					# 先更新 先插入 dh
+
+					# 更新到数据库
+					Outline_Update_URL_Update = "https://apiyunzhongzhuancom.vercel.app/php/v4/offline_insert_hash?offline_id="+ID+"&new_hash="+SHA256+"&size="+str(SIZE)+"&name="+URL_Name+"&id="+ID+"&dhdn=1070892573/yunzhongzhuan&ghdn="+GithubDockerName+"&gldn="+GitlabDockerName+"&qdn="+QuayDockerName+"&tdn="+TreeDockerName+"&hudn="+HerokuUsDockerName+"&hedn="+HerokuEuDockerName+"&odn="+OktetoDockerName+"&bfcvdn="+BizflyCloudVNDockerName+"&awsecrpdn="+AWSDockerName+"&adn="+AzureUSDockerName+"&dodn="+DigitalOceanDockerName+"&apdu=AWS_Public_Download_URL&key=" + (hashlib.md5((SHA256+"_qq1070892573").encode(encoding='UTF-8')).hexdigest());
+					New_Hash_ID = "-1";
+
+					######os.system('echo "' + Outline_Update_URL_Update + '"');
+					Outline_Update_Response_Headers_Status_Code_2 = -1;
+					Outline_Update_Response_Headers_Status_Code_Error_Times_Max_2 = 10;
+					Outline_Update_Response_Headers_Status_Code_Error_Times_Now_2 = 0;
+					while Outline_Update_Response_Headers_Status_Code_2!=200:						
+						if Outline_Update_Response_Headers_Status_Code_Error_Times_Now_2 > Outline_Update_Response_Headers_Status_Code_Error_Times_Max_2:
+							os.system('echo err offline 01');
+							1 + "1";
+						try:
+							Outline_Update_Response_Update_2 = requests.get( url = Outline_Update_URL_Update );
+							New_Hash_ID = Outline_Update_Response_Update_2.text;
+							Outline_Update_Response_Headers_Status_Code_2 = Outline_Update_Response_Update_2.status_code;
+							Outline_Update_Response_Headers_Status_Code_Error_Times_Now_2 = Outline_Update_Response_Headers_Status_Code_Error_Times_Now_2 + 1;
+						except:
+							pass
+
+
+
+
+
+
+
+
+
+					# if SIZE <= 1330 * 1024 * 1024:
+					if False:
+
+						# Docker
+						# index.docker.io
+						# registry-1.docker.io
+						os.system('echo bfcv offline');
+						Docker = "cr-hn-1.bizflycloud.vn/" + BizflyCloudVNDockerName;
+						Docker_Array = Docker.split('/');
+						# Server
+						Server = Docker_Array[0];
+						# 仓库地址
+						Name_Space = Docker_Array[1] + "/" + Docker_Array[2];
+
+
+						# 先尝试请求上传，会得到服务器的 Headers 响应，告诉用户去哪个服务器请求 Token 值
+						URL = "https://" + Server + "/v2/" + Name_Space + "/blobs/uploads/";
+						Headers = {
+							"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+						}
+
+						while CURL_Lock == True:
+							time.sleep(random.randint(1,5));
+						CURL_Lock = True;
+						Response = requests.get( url = URL , headers = Headers );
+						# print(Response);
+						# print(Response.text);
+						# print(Response.headers);
+						# Response Headers:
+						# {'Date': 'Wed, 23 Jun 2021 18:38:04 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Content-Length': '61', 'Connection': 'keep-alive', 'Www-Authenticate': 'Bearer realm="https://swr.cn-south-1.myhuaweicloud.com/swr/auth/v2/registry/auth/",service="dockyard",scope="repository:object/tmp:pull"', 'Server': 'swrlb'}
+						# Response Text
+						# {"errors":[{"code":"DENIED","message":"Authenticate Error"}]}
+						WWW_Authenticate_Array = Response.headers["Www-Authenticate"].split('"');
+						# 先获取 Token
+						# 先获取 Token
+
+						# URL
+						# "https://swr.cn-south-1.myhuaweicloud.com/swr/auth/v2/registry/auth/?service=dockyard&scope=repository:object/tmp:pull,push"
+						URL = WWW_Authenticate_Array[1] + "?service=" + WWW_Authenticate_Array[3] + "&scope=" + WWW_Authenticate_Array[5] + ",push";
+
+						# Data = "grant_type=password&client_id=1&username=" + Username + "&password=" + Password + "&service=" + WWW_Authenticate_Array[3] + "&scope=" + WWW_Authenticate_Array[5] + ",push";
+						# 模拟 Headers
+						# 模拟 Headers
+						Headers = {
+							"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+							"Authorization":"Basic " + BizflyCloudVN_Basic_Auth,
+						}
+
+						Response = requests.get( url = URL , headers = Headers );
+						JSON = json.loads(Response.text);
+						# print(JSON);
+						Token = JSON["token"];
+						# print(Response);
+						# print(Response.text);
+						# print(Response.headers);
+						# print(Token);
+						# 重新请求上传地址，获取上传入口
+						URL = "https://" + Server + "/v2/" + Name_Space + "/blobs/uploads/";
+						# WWW_Authenticate_Array[0].split(' ')[0] = "Bearer"
+						Authorization = WWW_Authenticate_Array[0].split(' ')[0] + " " + Token;
+						Headers = {
+							"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+							"Authorization": Authorization,
+						}
+						Response = requests.post( url = URL , headers = Headers );
+						# print(Response);
+						# print(Response.text);
+						# print(Response.headers);
+						# 是当前传输任务的文件ID，可用于续传或取消/中止。
+						UUID = Response.headers["Docker-Upload-Uuid"];
+						# 下一步上传地址
+						Location = Response.headers["Location"];
+
+						# 最后一次提交上传时，需要用到的结束/结尾地址。
+						Location = Location + "&digest=sha256:" + SHA256;
+
+						CURL = "curl -X PUT --data-binary '@offline_blob' -H 'Content-Type: application/octet-stream' -H 'Authorization: " + Authorization + "' -H 'Docker-Upload-UUID: " + UUID + "' -A 'Docker-Client/19.03.8-ce (linux)' -H 'Content-Range: 0-" + str(SIZE) + "' '" + Location + "'";
+						CURL_Error_Times_Max = 10;
+						CURL_Error_Times_Now = 0;
+						CURL_Result = -1;
+						while CURL_Error_Times_Now < CURL_Error_Times_Max:
+							CURL_Error_Times_Now = CURL_Error_Times_Now + 1;
+							CURL_Result = os.system(CURL);
+							# ######os.system('echo "err 29 code ' + str(CURL_Result) + '"');
+							if CURL_Result == 0 or CURL_Result == 13312:
+								break;
+							continue;
+						if CURL_Result != 0 and CURL_Result != 13312:
+							continue;
+						CURL_Lock = False;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					if True:
+						# File_Path = "offline_blob";
+
+						# 上传到 Github Package Registry 备份
+
+						# SHA256 = CalcFileSha256(File_Path);
+						# SHA256 = os.popen('sha256sum blob');
+						# SHA256 = str(SHA256)[0:64];
+						# SHA256 =ResponseJSON[x1]["DockerFileSHA256"];
+						# print(SHA256);
+
+						# SIZE = os.path.getsize(File_Path);
+						# print(SIZE);
+
+						# Github Package Registry 不允许续传 需要一次性提交
+						# 单次提交大小 20 GB
+						# LENGTH =  SIZE;
+
+						# Docker
+						os.system('echo gh offline');
+
+						Docker = "ghcr.io/"+GithubDockerName ;
+						Docker_Array = Docker.split('/');
+						# Server
+						Server = Docker_Array[0];
+						# 仓库地址
+						Name_Space = Docker_Array[1] + "/" + Docker_Array[2];
+						# 容器镜像服务登录密码
+						# 从华为云控制台获取
+						# https://console.huaweicloud.com/swr/?region=cn-south-1#/app/dashboard
+						# Base64_encode({Username}:{Password})
+						Basic_Auth = Github_Basic_Auth;
+						# 先尝试请求上传，会得到服务器的 Headers 响应，告诉用户去哪个服务器请求 Token 值
+						URL = "https://" + Server + "/v2/" + Name_Space + "/blobs/sha256:" + SHA256;
+						Headers = {
+							"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+						}
+						while CURL_Lock == True:
+							time.sleep(random.randint(1,5));
+						CURL_Lock = True;
+						Response = requests.get( url = URL , headers = Headers );
+						# print(Response);
+						# print(Response.text);
+						# print(Response.headers);
+						# Response Headers:
+						# {'Date': 'Wed, 23 Jun 2021 18:38:04 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Content-Length': '61', 'Connection': 'keep-alive', 'Www-Authenticate': 'Bearer realm="https://swr.cn-south-1.myhuaweicloud.com/swr/auth/v2/registry/auth/",service="dockyard",scope="repository:object/tmp:pull"', 'Server': 'swrlb'}
+						# Response Text
+						# {"errors":[{"code":"DENIED","message":"Authenticate Error"}]}
+						WWW_Authenticate_Array = Response.headers["Www-Authenticate"].split('"');
+						# 先获取 Token
+						# URL
+						# "https://swr.cn-south-1.myhuaweicloud.com/swr/auth/v2/registry/auth/?service=dockyard&scope=repository:object/tmp:pull,push"
+						URL = WWW_Authenticate_Array[1] + "?service=" + WWW_Authenticate_Array[3] + "&scope=" + WWW_Authenticate_Array[5] + ",push";
+
+						# 模拟 Headers
+						Headers = {
+							"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+							"Authorization":"Basic " + Basic_Auth,
+						}
+						Response = requests.get( url = URL , headers = Headers );
+						JSON = json.loads(Response.text);
+						# 得到 Token
+						# "expires_in":3600
+						Token = JSON["token"];
+						# print(Response);
+						# print(Response.text);
+						# print(Response.headers);
+						# print(Token);
+
+
+						# 重新请求上传地址，获取上传入口
+						URL = "https://" + Server + "/v2/" + Name_Space + "/blobs/uploads/";
+						# WWW_Authenticate_Array[0].split(' ')[0] = "Bearer"
+						Authorization = WWW_Authenticate_Array[0].split(' ')[0] + " " + Token;
+						Headers = {
+							"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+							"Authorization": Authorization,
+						}
+						Response = requests.post( url = URL , headers = Headers );
+						# print(Response);
+						# print(Response.text);
+						# print(Response.headers);
+						# 是当前传输任务的文件ID，可用于续传或取消/中止。
+						UUID = Response.headers["Docker-Upload-Uuid"];
+						# 下一步上传地址
+						Location = Response.headers["Location"];
+						# print("是否有http/https?");
+						# print(Location);
+						Location = "https://" + Server + Location + "?digest=sha256:" + SHA256;
+
+						# print("已经替换 是否有http/https?");
+						# print(Location);
+
+						CURL = "curl -X PUT --data-binary '@offline_blob' -H 'Content-Type: application/octet-stream' -H 'Authorization: " + Authorization + "' -H 'Docker-Upload-UUID: " + UUID + "' -A 'Docker-Client/19.03.8-ce (linux)'  " + Location; # -H 'Content-Range: 0-" + str(SIZE) + "'
+						CURL_Error_Times_Max = 10;
+						CURL_Error_Times_Now = 0;
+						CURL_Result = -1;
+						while CURL_Error_Times_Now < CURL_Error_Times_Max:
+							CURL_Error_Times_Now = CURL_Error_Times_Now + 1;
+							CURL_Result = os.system(CURL);
+							# ######os.system('echo "err 29 code ' + str(CURL_Result) + '"');
+							if CURL_Result == 0 or CURL_Result == 13312:
+								break;
+							continue;
+						if CURL_Result != 0 and CURL_Result != 13312:
+							continue;
+						CURL_Lock = False;
+
+
+
+
+					if False:
+						# Quay.io
+						os.system('echo q offline');
+						# Docker
+						Docker = "quay.io/" + QuayDockerName;
+						Docker_Array = Docker.split('/');
+
+						# Server
+						Server = Docker_Array[0];
+
+						# 仓库地址
+						Name_Space = Docker_Array[1] + "/" + Docker_Array[2];
+
+						# 容器镜像服务登录密码
+						# 从华为云控制台获取
+						# https://console.huaweicloud.com/swr/?region=cn-south-1#/app/dashboard
+						# Base64_encode({Username}:{Password})
+						Basic_Auth = Quay_Basic_Auth;
+
+
+						# 先尝试请求上传，会得到服务器的 Headers 响应，告诉用户去哪个服务器请求 Token 值
+						URL = "https://" + Server + "/v2/" + Name_Space + "/blobs/uploads/" #  + SHA256;
+
+						Headers = {
+							"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+						}
+
+						while CURL_Lock == True:
+							time.sleep(random.randint(1,5));
+						CURL_Lock = True;
+
+
+						Get_Token_Error_Time = 0;
+						while True:
+							if Get_Token_Error_Time >= 10:
+								2 + "2";
+							# if True:
+							try:
+								Response = requests.post( url = URL , headers = Headers );
+
+								# print(Response);
+								# print(Response.text);
+								# print(Response.headers);
+
+								# Response Headers:
+								# {'Date': 'Wed, 23 Jun 2021 18:38:04 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Content-Length': '61', 'Connection': 'keep-alive', 'Www-Authenticate': 'Bearer realm="https://swr.cn-south-1.myhuaweicloud.com/swr/auth/v2/registry/auth/",service="dockyard",scope="repository:object/tmp:pull"', 'Server': 'swrlb'}
+								# Response Text
+								# {"errors":[{"code":"DENIED","message":"Authenticate Error"}]}
+
+								WWW_Authenticate_Array = Response.headers["Www-Authenticate"].split('"');
+
+
+								# 先获取 Token
+
+								# URL
+								# "https://swr.cn-south-1.myhuaweicloud.com/swr/auth/v2/registry/auth/?service=dockyard&scope=repository:object/tmp:pull,push"
+								URL = WWW_Authenticate_Array[1] + "?service=" + WWW_Authenticate_Array[3] + "&scope=" + WWW_Authenticate_Array[5] + ",push";
+
+								# 模拟 Headers
+								Headers = {
+									"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+									"Authorization":"Basic " + Basic_Auth,
+								}
+
+								Response = requests.get( url = URL , headers = Headers );
+
+								JSON = json.loads(Response.text);
+
+								# 得到 Token
+								# "expires_in":3600
+								Token = JSON["token"];
+
+								# print(Response);
+								# print(Response.text);
+								# print(Response.headers);
+								# print(Token);
+
+
+
+
+								# 重新请求上传地址，获取上传入口
+
+								URL = "https://" + Server + "/v2/" + Name_Space + "/blobs/uploads/";
+
+								# WWW_Authenticate_Array[0].split(' ')[0] = "Bearer"
+								Authorization = WWW_Authenticate_Array[0].split(' ')[0] + " " + Token;
+
+
+								Headers = {
+									
+									"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+
+
+									"Authorization": Authorization,
+
+								}
+
+								Response = requests.post( url = URL , headers = Headers );
+
+								# print(Response);
+								# print(Response.text);
+								# print(Response.headers);
+
+
+
+
+
+								# 是当前传输任务的文件ID，可用于续传或取消/中止。
+								UUID = Response.headers["Docker-Upload-Uuid"];
+
+								# 下一步上传地址
+								Location = Response.headers["Location"];
+
+
+								# print("是否有http/https?");
+								# print(Location);
+
+
+								Location = Location + "?digest=sha256:" + SHA256;
+
+
+
+								# print("已经替换 是否有http/https?");
+								# print(Location);
+								break;
+							# else:
+							except:
+								os.system('echo err 3');
+								time.sleep(Get_Token_Error_Time);
+								Get_Token_Error_Time = Get_Token_Error_Time + 1;
+
+						CURL = "curl -X PUT --data-binary '@offline_blob' -H 'Content-Type: application/octet-stream' -H 'Authorization: " + Authorization + "' -H 'Docker-Upload-UUID: " + UUID + "' -A 'Docker-Client/19.03.8-ce (linux)' -H 'Content-Range: 0-" + str(SIZE) + "' '" + Location + "'";
+
+						CURL_Error_Times_Max = 10;
+						CURL_Error_Times_Now = 0;
+						CURL_Result = -1;
+						while CURL_Error_Times_Now < CURL_Error_Times_Max:
+							CURL_Error_Times_Now = CURL_Error_Times_Now + 1;
+							CURL_Result = os.system(CURL);
+							# ######os.system('echo "err 29 code ' + str(CURL_Result) + '"');
+							if CURL_Result == 0 or CURL_Result == 13312:
+								break;
+							continue;
+						if CURL_Result != 0 and CURL_Result != 13312:
+							continue;
+						CURL_Lock = False;
+
+
+
+
+
+					if False:
+						# Tree
+
+						# Docker
+						Docker = "repo.treescale.com/" + TreeDockerName;
+						Docker_Array = Docker.split('/');
+
+						# Server
+						Server = Docker_Array[0];
+
+						# 仓库地址
+						Name_Space = Docker_Array[1] + "/" + Docker_Array[2];
+
+						# 容器镜像服务登录密码
+						# 从华为云控制台获取
+						# https://console.huaweicloud.com/swr/?region=cn-south-1#/app/dashboard
+						# Base64_encode({Username}:{Password})
+						Basic_Auth = Tree_Basic_Auth;
+
+
+						# 先尝试请求上传，会得到服务器的 Headers 响应，告诉用户去哪个服务器请求 Token 值
+						URL = "https://" + Server + "/v2/" + Name_Space + "/blobs/uploads/" #  + SHA256;
+
+						Headers = {
+							"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+						}
+
+						while CURL_Lock == True:
+							time.sleep(random.randint(1,5));
+						CURL_Lock = True;
+
+
+						Get_Token_Error_Time = 0;
+						while True:
+							if Get_Token_Error_Time >= 10:
+
+								try:
+									File.close();
+								except:
+									os.system('echo err 4');
+									pass
+
+
+								2 + "2";
+							# if True:
+							try:
+								Response = requests.get( url = URL , headers = Headers );
+
+								# print(Response);
+								# print(Response.text);
+								# print(Response.headers);
+
+								# Response Headers:
+								# {'Date': 'Wed, 23 Jun 2021 18:38:04 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Content-Length': '61', 'Connection': 'keep-alive', 'Www-Authenticate': 'Bearer realm="https://swr.cn-south-1.myhuaweicloud.com/swr/auth/v2/registry/auth/",service="dockyard",scope="repository:object/tmp:pull"', 'Server': 'swrlb'}
+								# Response Text
+								# {"errors":[{"code":"DENIED","message":"Authenticate Error"}]}
+
+								WWW_Authenticate_Array = Response.headers["Www-Authenticate"].split('"');
+
+
+								# 先获取 Token
+
+								# URL
+								# "https://swr.cn-south-1.myhuaweicloud.com/swr/auth/v2/registry/auth/?service=dockyard&scope=repository:object/tmp:pull,push"
+								URL = WWW_Authenticate_Array[1] + "?service=" + WWW_Authenticate_Array[3] + "&scope=" + WWW_Authenticate_Array[5] + ",push";
+
+								# 模拟 Headers
+								Headers = {
+									"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+									"Authorization":"Basic " + Basic_Auth,
+								}
+
+								Response = requests.get( url = URL , headers = Headers );
+
+								JSON = json.loads(Response.text);
+
+								# 得到 Token
+								# "expires_in":3600
+								Token = JSON["token"];
+
+								# print(Response);
+								# print(Response.text);
+								# print(Response.headers);
+								# print(Token);
+
+
+
+
+								# 重新请求上传地址，获取上传入口
+
+								URL = "https://" + Server + "/v2/" + Name_Space + "/blobs/uploads/";
+
+								# WWW_Authenticate_Array[0].split(' ')[0] = "Bearer"
+								Authorization = WWW_Authenticate_Array[0].split(' ')[0] + " " + Token;
+
+
+								Headers = {
+									
+									"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+
+
+									"Authorization": Authorization,
+
+								}
+
+								Response = requests.post( url = URL , headers = Headers );
+
+								# print(Response);
+								# print(Response.text);
+								# print(Response.headers);
+
+
+
+
+
+								# 是当前传输任务的文件ID，可用于续传或取消/中止。
+								UUID = Response.headers["Docker-Upload-Uuid"];
+
+								# 下一步上传地址
+								Location = Response.headers["Location"];
+
+
+								# print("是否有http/https?");
+								# print(Location);
+
+
+
+
+
+								# 单次提交大小 5 M
+								LENGTH =  100 * 1024 * 1024;
+
+
+
+
+								# 计算需要上传多少次
+								# 文件大小/提交大小
+								TIMES = int( math.ceil( SIZE / LENGTH ) );
+
+
+
+								# 读入文件
+								File = open(File_Path, 'rb');
+
+
+
+
+
+
+								# 开始循环上传
+								for x in range(0,TIMES):
+
+
+
+
+
+									# 本次提交上传的数据
+									Temp_Data = bytes()
+
+
+
+									# 咬入/读入一段文件
+									Temp_Data += File.read( LENGTH );
+
+
+
+
+
+									Headers = {
+										"Content-Type": "application/octet-stream",
+										"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+										"Authorization": Authorization,
+										# "Docker-Upload-UUID":UUID,
+									}
+
+
+
+
+									# 如果是最后一次
+									if( int(x+1) == TIMES ):
+
+
+										# 最后一次提交上传时，需要用到的结束/结尾地址。
+										Location = Location + "&digest=sha256:" + SHA256;
+
+
+										#print(Location);
+
+										# 最后一次上传请求头
+										Headers["Content-Range"] = str( x * LENGTH ) + "-" + str( SIZE );
+
+										# 最后一次上传，使用 put
+										Response = requests.put( url = Location , data = Temp_Data , headers = Headers );
+
+										# 完成
+										#print("任务完成！")
+										#print(Response)
+										#print(Response.headers)
+										#print(Response.text)
+
+										pass
+
+									else:
+
+
+										# 当前提交的文件，所在源文件的段
+										Headers["Content-Range"] =  str( x * LENGTH ) + "-" + str( ( (x+1) * LENGTH ) -1 );
+
+
+										# 非最后一次上传，都使用 patch
+										Response = requests.patch( url = Location , data= Temp_Data , headers = Headers );
+
+
+										# 更新最新的上传地址
+										Location = Response.headers["Location"];
+
+										#print(Location);
+
+										# 继续
+										#print("继续上传！")
+										#print(Response)
+										#print(Response.headers)
+										#print(Response.text)
+
+
+
+
+
+									pass
+
+
+
+
+								try:
+									File.close();
+								except:
+									os.system('echo err 5');
+									pass
+
+
+								# print("已经替换 是否有http/https?");
+								# print(Location);
+								break;
+							# else:
+							except:
+
+								try:
+									File.close();
+								except:
+									os.system('echo err 6');
+									pass
+
+								time.sleep(Get_Token_Error_Time);
+								Get_Token_Error_Time = Get_Token_Error_Time + 1;
+
+						# CURL = "curl -X PUT --data-binary '@offline_blob' -H 'Content-Type: application/octet-stream' -H 'Authorization: " + Authorization + "' -H 'Docker-Upload-UUID: " + UUID + "' -A 'Docker-Client/19.03.8-ce (linux)' -H 'Content-Range: 0-" + str(SIZE) + "' '" + Location + "'";
+
+
+						# os.system(CURL);
+						CURL_Lock = False;
+
+
+
+
+
+
+
+
+
+
+
+
+
+					# Gitlab
+					os.system('echo gl offline');
+					# Docker
+					Docker = "registry.gitlab.com/" + GitlabDockerName;
+					Docker_Array = Docker.split('/');
+
+					# Server
+					Server = Docker_Array[0];
+
+					# 仓库地址
+					Name_Space = Docker_Array[1] + "/" + Docker_Array[2];
+
+					# 容器镜像服务登录密码
+					# 从华为云控制台获取
+					# https://console.huaweicloud.com/swr/?region=cn-south-1#/app/dashboard
+					# Base64_encode({Username}:{Password})
+					Basic_Auth = Gitlab_Basic_Auth;
+
+
+					# 先尝试请求上传，会得到服务器的 Headers 响应，告诉用户去哪个服务器请求 Token 值
+					URL = "https://" + Server + "/v2/" + Name_Space + "/blobs/sha256:" + SHA256;
+
+					Headers = {
+						"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+					}
+
+					while CURL_Lock == True:
+						time.sleep(random.randint(1,5));
+					CURL_Lock = True;
+
+
+					Get_Token_Error_Time = 0;
+					while True:
+						if Get_Token_Error_Time >= 10:
+							2 + "2";
+						# if True:
+						try:
+							Response = requests.get( url = URL , headers = Headers );
+
+							# print(Response);
+							# print(Response.text);
+							# print(Response.headers);
+
+							# Response Headers:
+							# {'Date': 'Wed, 23 Jun 2021 18:38:04 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Content-Length': '61', 'Connection': 'keep-alive', 'Www-Authenticate': 'Bearer realm="https://swr.cn-south-1.myhuaweicloud.com/swr/auth/v2/registry/auth/",service="dockyard",scope="repository:object/tmp:pull"', 'Server': 'swrlb'}
+							# Response Text
+							# {"errors":[{"code":"DENIED","message":"Authenticate Error"}]}
+
+							WWW_Authenticate_Array = Response.headers["Www-Authenticate"].split('"');
+
+
+							# 先获取 Token
+
+							# URL
+							# "https://swr.cn-south-1.myhuaweicloud.com/swr/auth/v2/registry/auth/?service=dockyard&scope=repository:object/tmp:pull,push"
+							URL = WWW_Authenticate_Array[1] + "?service=" + WWW_Authenticate_Array[3] + "&scope=" + WWW_Authenticate_Array[5] + ",push";
+
+							# 模拟 Headers
+							Headers = {
+								"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+								"Authorization":"Basic " + Basic_Auth,
+							}
+
+							Response = requests.get( url = URL , headers = Headers );
+
+							JSON = json.loads(Response.text);
+
+							# 得到 Token
+							# "expires_in":3600
+							Token = JSON["token"];
+
+							# print(Response);
+							# print(Response.text);
+							# print(Response.headers);
+							# print(Token);
+
+
+
+
+							# 重新请求上传地址，获取上传入口
+
+							URL = "https://" + Server + "/v2/" + Name_Space + "/blobs/uploads/";
+
+							# WWW_Authenticate_Array[0].split(' ')[0] = "Bearer"
+							Authorization = WWW_Authenticate_Array[0].split(' ')[0] + " " + Token;
+
+
+							Headers = {
+								
+								"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+
+
+								"Authorization": Authorization,
+
+							}
+
+							Response = requests.post( url = URL , headers = Headers );
+
+							# print(Response);
+							# print(Response.text);
+							# print(Response.headers);
+
+
+
+
+
+							# 是当前传输任务的文件ID，可用于续传或取消/中止。
+							UUID = Response.headers["Docker-Upload-Uuid"];
+
+							# 下一步上传地址
+							Location = Response.headers["Location"];
+
+
+							# print("是否有http/https?");
+							# print(Location);
+
+
+							Location = Location + "&digest=sha256:" + SHA256;
+
+
+
+							# print("已经替换 是否有http/https?");
+							# print(Location);
+							break;
+						# else:
+						except:
+							os.system('echo err 7');
+							time.sleep(Get_Token_Error_Time);
+							Get_Token_Error_Time = Get_Token_Error_Time + 1;
+
+					CURL = "curl -X PUT --data-binary '@offline_blob' -H 'Content-Type: application/octet-stream' -H 'Authorization: " + Authorization + "' -H 'Docker-Upload-UUID: " + UUID + "' -A 'Docker-Client/19.03.8-ce (linux)' -H 'Content-Range: 0-" + str(SIZE) + "' '" + Location + "'";
+
+
+					CURL_Error_Times_Max = 10;
+					CURL_Error_Times_Now = 0;
+					CURL_Result = -1;
+					while CURL_Error_Times_Now < CURL_Error_Times_Max:
+						CURL_Error_Times_Now = CURL_Error_Times_Now + 1;
+						CURL_Result = os.system(CURL);
+						# ######os.system('echo "err 29 code ' + str(CURL_Result) + '"');
+						if CURL_Result == 0 or CURL_Result == 13312:
+							break;
+						continue;
+					if CURL_Result != 0 and CURL_Result != 13312:
+						continue;
+					CURL_Lock = False;
+
+
+
+
+
+
+
+
+
+
+					# Okteto
+					# Docker
+					os.system('echo o offline');
+					Docker = "registry.cloud.okteto.net/" + OktetoDockerName;
+					Docker_Array = Docker.split('/');
+
+					# Server
+					Server = Docker_Array[0];
+
+					# 仓库地址
+					Name_Space = Docker_Array[1] + "/" + Docker_Array[2];
+
+					# 容器镜像服务登录密码
+					# 从华为云控制台获取
+					# https://console.huaweicloud.com/swr/?region=cn-south-1#/app/dashboard
+					# Base64_encode({Username}:{Password})
+					Basic_Auth = Okteto_Basic_Auth;
+
+
+					# 先尝试请求上传，会得到服务器的 Headers 响应，告诉用户去哪个服务器请求 Token 值
+					URL = "https://" + Server + "/v2/" + Name_Space + "/blobs/uploads/"; # + SHA256;
+
+					Headers = {
+						"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+					}
+
+					while CURL_Lock == True:
+						time.sleep(random.randint(1,5));
+					CURL_Lock = True;
+
+
+					Get_Token_Error_Time = 0;
+					while True:
+						if Get_Token_Error_Time >= 10:
+							2 + "2";
+						# if True:
+						try:
+							Response = requests.post( url = URL , headers = Headers );
+
+							# print(Response);
+							# print(Response.text);
+							# print(Response.headers);
+
+							# Response Headers:
+							# {'Date': 'Wed, 23 Jun 2021 18:38:04 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Content-Length': '61', 'Connection': 'keep-alive', 'Www-Authenticate': 'Bearer realm="https://swr.cn-south-1.myhuaweicloud.com/swr/auth/v2/registry/auth/",service="dockyard",scope="repository:object/tmp:pull"', 'Server': 'swrlb'}
+							# Response Text
+							# {"errors":[{"code":"DENIED","message":"Authenticate Error"}]}
+
+							WWW_Authenticate_Array = Response.headers["Www-Authenticate"].split('"');
+
+
+							# 先获取 Token
+
+							# URL
+							# "https://swr.cn-south-1.myhuaweicloud.com/swr/auth/v2/registry/auth/?service=dockyard&scope=repository:object/tmp:pull,push"
+							URL = WWW_Authenticate_Array[1] + "?service=" + WWW_Authenticate_Array[3] + "&scope=" + WWW_Authenticate_Array[5] + ",push";
+
+							# 模拟 Headers
+							Headers = {
+								"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+								"Authorization":"Basic " + Basic_Auth,
+							}
+
+							Response = requests.post( url = URL , headers = Headers );
+
+							JSON = json.loads(Response.text);
+
+							# 得到 Token
+							# "expires_in":3600
+							Token = JSON["access_token"];
+
+							# print(Response);
+							# print(Response.text);
+							# print(Response.headers);
+							# print(Token);
+
+
+
+
+							# 重新请求上传地址，获取上传入口
+
+							URL = "https://" + Server + "/v2/" + Name_Space + "/blobs/uploads/";
+
+							# WWW_Authenticate_Array[0].split(' ')[0] = "Bearer"
+							Authorization = WWW_Authenticate_Array[0].split(' ')[0] + " " + Token;
+
+
+							Headers = {
+								
+								"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+
+
+								"Authorization": Authorization,
+
+							}
+
+							Response = requests.post( url = URL , headers = Headers );
+
+							# print(Response);
+							# print(Response.text);
+							# print(Response.headers);
+
+
+
+
+
+							# 是当前传输任务的文件ID，可用于续传或取消/中止。
+							UUID = Response.headers["Docker-Upload-Uuid"];
+
+							# 下一步上传地址
+							# Location = Response.headers["Location"];
+
+
+							# print("是否有http/https?");
+							# print(Location);
+
+
+							Location = Response.headers["Location"] + "&digest=sha256:" + SHA256;
+
+
+
+							# print("已经替换 是否有http/https?");
+							# print(Location);
+							break;
+						# else:
+						except:
+							os.system('echo err 7-2');
+							time.sleep(Get_Token_Error_Time);
+							Get_Token_Error_Time = Get_Token_Error_Time + 1;
+
+					CURL = "curl -X PUT --data-binary '@offline_blob' -H 'Content-Type: application/octet-stream' -H 'Authorization: " + Authorization + "' -H 'Docker-Upload-UUID: " + UUID + "' -A 'Docker-Client/19.03.8-ce (linux)' -H 'Content-Range: 0-" + str(SIZE) + "' '" + Location + "'";
+
+
+					CURL_Error_Times_Max = 10;
+					CURL_Error_Times_Now = 0;
+					CURL_Result = -1;
+					while CURL_Error_Times_Now < CURL_Error_Times_Max:
+						CURL_Error_Times_Now = CURL_Error_Times_Now + 1;
+						CURL_Result = os.system(CURL);
+						# ######os.system('echo "err 29 code ' + str(CURL_Result) + '"');
+						if CURL_Result == 0 or CURL_Result == 13312:
+							break;
+						continue;
+					if CURL_Result != 0 and CURL_Result != 13312:
+						continue;
+					CURL_Lock = False;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					# HerokuUs
+					os.system('echo h-u offline');
+					# Heroku us
+
+					# Docker
+					# index.docker.io
+					# registry-1.docker.io
+					Docker = "registry.heroku.com/" + HerokuUsDockerName;
+					Docker_Array = Docker.split('/');
+
+					# Server
+					Server = Docker_Array[0];
+
+					# 仓库地址
+					Name_Space = Docker_Array[1];
+
+					# 容器镜像服务登录密码
+					# 从华为云控制台获取
+					# https://console.huaweicloud.com/swr/?region=cn-south-1#/app/dashboard
+					# Base64_encode({Username}:{Password})
+					Basic_Auth = HerokuUs_Basic_Auth;
+
+					Authorization = "Basic " + Basic_Auth;
+
+
+					# 先尝试请求上传，会得到服务器的 Headers 响应，告诉用户去哪个服务器请求 Token 值
+					URL = "https://" + Server + "/v2/" + Name_Space + "/blobs/uploads/" #  + SHA256;
+
+					Headers = {
+						"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+						"Authorization":Authorization,
+					}
+
+					while CURL_Lock == True:
+						time.sleep(random.randint(1,5));
+					CURL_Lock = True;
+
+
+					Get_Token_Error_Time = 0;
+					while True:
+						if Get_Token_Error_Time >= 10:
+							2 + "2";
+						# if True:
+						try:
+							Response = requests.post( url = URL , headers = Headers );
+
+							# print(Response);
+							# print(Response.text);
+							# print(Response.headers);
+
+							# Response Headers:
+							# {'Date': 'Wed, 23 Jun 2021 18:38:04 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Content-Length': '61', 'Connection': 'keep-alive', 'Www-Authenticate': 'Bearer realm="https://swr.cn-south-1.myhuaweicloud.com/swr/auth/v2/registry/auth/",service="dockyard",scope="repository:object/tmp:pull"', 'Server': 'swrlb'}
+							# Response Text
+							# {"errors":[{"code":"DENIED","message":"Authenticate Error"}]}
+
+							# WWW_Authenticate_Array = Response.headers["Www-Authenticate"].split('"');
+
+
+							# 先获取 Token
+
+							# URL
+							# "https://swr.cn-south-1.myhuaweicloud.com/swr/auth/v2/registry/auth/?service=dockyard&scope=repository:object/tmp:pull,push"
+							# URL = WWW_Authenticate_Array[1] + "?service=" + WWW_Authenticate_Array[3] + "&scope=" + WWW_Authenticate_Array[5] + ",push";
+
+							# 模拟 Headers
+							# Headers = {
+							#	"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+							#	"Authorization":"Basic " + Basic_Auth,
+							# }
+
+							# Response = requests.get( url = URL , headers = Headers );
+
+							# JSON = json.loads(Response.text);
+
+							# 得到 Token
+							# "expires_in":3600
+							# Token = JSON["token"];
+
+							# print(Response);
+							# print(Response.text);
+							# print(Response.headers);
+							# print(Token);
+
+
+
+
+							# 重新请求上传地址，获取上传入口
+
+							# URL = "https://" + Server + "/v2/" + Name_Space + "/blobs/uploads/";
+
+							# WWW_Authenticate_Array[0].split(' ')[0] = "Bearer"
+							# Authorization = WWW_Authenticate_Array[0].split(' ')[0] + " " + Token;
+
+
+							# Headers = {
+								
+							#	"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+
+
+							#	"Authorization": Authorization,
+
+							# }
+
+							# Response = requests.post( url = URL , headers = Headers );
+
+							# print(Response);
+							# print(Response.text);
+							# print(Response.headers);
+
+
+
+
+
+							# 是当前传输任务的文件ID，可用于续传或取消/中止。
+							UUID = Response.headers["Docker-Upload-Uuid"];
+
+							# 下一步上传地址
+							Location = Response.headers["Location"];
+
+
+							# print("是否有http/https?");
+							# print(Location);
+
+
+							Location = Location + "&digest=sha256:" + SHA256;
+
+
+
+							# print("已经替换 是否有http/https?");
+							# print(Location);
+							break;
+						# else:
+						except:
+							os.system('echo err 8');
+							time.sleep(Get_Token_Error_Time);
+							Get_Token_Error_Time = Get_Token_Error_Time + 1;
+
+					CURL = "curl -X PUT --data-binary '@offline_blob' -H 'Content-Type: application/octet-stream' -H 'Authorization: " + Authorization + "' -H 'Docker-Upload-UUID: " + UUID + "' -A 'Docker-Client/19.03.8-ce (linux)' -H 'Content-Range: 0-" + str(SIZE) + "' '" + Location + "'";
+
+					CURL_Error_Times_Max = 10;
+					CURL_Error_Times_Now = 0;
+					CURL_Result = -1;
+					while CURL_Error_Times_Now < CURL_Error_Times_Max:
+						CURL_Error_Times_Now = CURL_Error_Times_Now + 1;
+						CURL_Result = os.system(CURL);
+						# ######os.system('echo "err 29 code ' + str(CURL_Result) + '"');
+						if CURL_Result == 0 or CURL_Result == 13312:
+							break;
+						continue;
+					if CURL_Result != 0 and CURL_Result != 13312:
+						continue;
+					CURL_Lock = False;
+
+
+
+
+
+					# HerokuEu
+					os.system('echo h-e offline');
+					# Heroku us
+
+					# Docker
+					# index.docker.io
+					# registry-1.docker.io
+					Docker = "registry.heroku.com/" + HerokuEuDockerName;
+					Docker_Array = Docker.split('/');
+
+					# Server
+					Server = Docker_Array[0];
+
+					# 仓库地址
+					Name_Space = Docker_Array[1];
+
+					# 容器镜像服务登录密码
+					# 从华为云控制台获取
+					# https://console.huaweicloud.com/swr/?region=cn-south-1#/app/dashboard
+					# Base64_encode({Username}:{Password})
+					Basic_Auth = HerokuEu_Basic_Auth;
+
+					Authorization = "Basic " + Basic_Auth;
+
+
+					# 先尝试请求上传，会得到服务器的 Headers 响应，告诉用户去哪个服务器请求 Token 值
+					URL = "https://" + Server + "/v2/" + Name_Space + "/blobs/uploads/" #  + SHA256;
+
+					Headers = {
+						"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+						"Authorization":Authorization,
+					}
+
+					while CURL_Lock == True:
+						time.sleep(random.randint(1,5));
+					CURL_Lock = True;
+
+
+					Get_Token_Error_Time = 0;
+					while True:
+						if Get_Token_Error_Time >= 10:
+							2 + "2";
+						# if True:
+						try:
+							Response = requests.post( url = URL , headers = Headers );
+
+							# print(Response);
+							# print(Response.text);
+							# print(Response.headers);
+
+							# Response Headers:
+							# {'Date': 'Wed, 23 Jun 2021 18:38:04 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Content-Length': '61', 'Connection': 'keep-alive', 'Www-Authenticate': 'Bearer realm="https://swr.cn-south-1.myhuaweicloud.com/swr/auth/v2/registry/auth/",service="dockyard",scope="repository:object/tmp:pull"', 'Server': 'swrlb'}
+							# Response Text
+							# {"errors":[{"code":"DENIED","message":"Authenticate Error"}]}
+
+							# WWW_Authenticate_Array = Response.headers["Www-Authenticate"].split('"');
+
+
+							# 先获取 Token
+
+							# URL
+							# "https://swr.cn-south-1.myhuaweicloud.com/swr/auth/v2/registry/auth/?service=dockyard&scope=repository:object/tmp:pull,push"
+							# URL = WWW_Authenticate_Array[1] + "?service=" + WWW_Authenticate_Array[3] + "&scope=" + WWW_Authenticate_Array[5] + ",push";
+
+							# 模拟 Headers
+							# Headers = {
+							#	"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+							#	"Authorization":"Basic " + Basic_Auth,
+							# }
+
+							# Response = requests.get( url = URL , headers = Headers );
+
+							# JSON = json.loads(Response.text);
+
+							# 得到 Token
+							# "expires_in":3600
+							# Token = JSON["token"];
+
+							# print(Response);
+							# print(Response.text);
+							# print(Response.headers);
+							# print(Token);
+
+
+
+
+							# 重新请求上传地址，获取上传入口
+
+							# URL = "https://" + Server + "/v2/" + Name_Space + "/blobs/uploads/";
+
+							# WWW_Authenticate_Array[0].split(' ')[0] = "Bearer"
+							# Authorization = WWW_Authenticate_Array[0].split(' ')[0] + " " + Token;
+
+
+							# Headers = {
+								
+							#	"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+
+
+							#	"Authorization": Authorization,
+
+							# }
+
+							# Response = requests.post( url = URL , headers = Headers );
+
+							# print(Response);
+							# print(Response.text);
+							# print(Response.headers);
+
+
+
+
+
+							# 是当前传输任务的文件ID，可用于续传或取消/中止。
+							UUID = Response.headers["Docker-Upload-Uuid"];
+
+							# 下一步上传地址
+							Location = Response.headers["Location"];
+
+
+							# print("是否有http/https?");
+							# print(Location);
+
+
+							Location = Location + "&digest=sha256:" + SHA256;
+
+
+
+							# print("已经替换 是否有http/https?");
+							# print(Location);
+							break;
+						# else:
+						except:
+							os.system('echo err 9');
+							time.sleep(Get_Token_Error_Time);
+							Get_Token_Error_Time = Get_Token_Error_Time + 1;
+
+					CURL = "curl -X PUT --data-binary '@offline_blob' -H 'Content-Type: application/octet-stream' -H 'Authorization: " + Authorization + "' -H 'Docker-Upload-UUID: " + UUID + "' -A 'Docker-Client/19.03.8-ce (linux)' -H 'Content-Range: 0-" + str(SIZE) + "' '" + Location + "'";
+
+					CURL_Error_Times_Max = 10;
+					CURL_Error_Times_Now = 0;
+					CURL_Result = -1;
+					while CURL_Error_Times_Now < CURL_Error_Times_Max:
+						CURL_Error_Times_Now = CURL_Error_Times_Now + 1;
+						CURL_Result = os.system(CURL);
+						# ######os.system('echo "err 29 code ' + str(CURL_Result) + '"');
+						if CURL_Result == 0 or CURL_Result == 13312:
+							break;
+						continue;
+					if CURL_Result != 0 and CURL_Result != 13312:
+						continue;
+					CURL_Lock = False;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					AWS_Public_Download_URL = "";
+
+
+					if True:
+
+						os.system('echo awsecrpublic offline');
+						# Heroku us
+
+						# Docker
+						# index.docker.io
+						# registry-1.docker.io
+						Docker = "public.ecr.aws/" + AWSDockerName;
+						Docker_Array = Docker.split('/');
+
+						# Server
+						Server = Docker_Array[0];
+
+						# 仓库地址
+						Name_Space = Docker_Array[1] + "/" + Docker_Array[2];
+
+						# 容器镜像服务登录密码
+						# 从华为云控制台获取
+						# https://console.huaweicloud.com/swr/?region=cn-south-1#/app/dashboard
+						# Base64_encode({Username}:{Password})
+
+
+
+
+						
+
+						while CURL_Lock == True:
+							time.sleep(random.randint(1,5));
+						CURL_Lock = True;
+
+
+						Get_Token_Error_Time = 0;
+						while True:
+							if Get_Token_Error_Time >= 10:
+								2 + "2";
+							# if True:
+							try:
+
+
+
+
+								# 先尝试请求上传，会得到服务器的 Headers 响应，告诉用户去哪个服务器请求 Token 值
+								URL = "https://" + Server + "/v2/" + Name_Space + "/blobs/uploads/";
+
+								Headers = {
+									"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+								}
+
+								Response = requests.post( url = URL , headers = Headers );
+
+
+								# print('awsecrpe1');
+								# print(Response);
+								# print(Response.text);
+								# ######os.system('echo awsecrpe1');
+								# ######os.system('echo ' + Response.text);
+								# print(Response.headers);
+
+								WWW_Authenticate_Array = Response.headers["Www-Authenticate"].split('"');
+
+								URL = WWW_Authenticate_Array[1] + "?service=" + WWW_Authenticate_Array[3] + "&scope=" + WWW_Authenticate_Array[5];
+
+								Basic_Auth = AWS_Basic_Auth;
+
+								Basic_Auth = str(base64.b64encode(('AWS:'+Basic_Auth).encode('utf-8')),'utf-8');
+
+								Authorization = "Basic " + Basic_Auth;
+
+								# 模拟 Headers
+								Headers = {
+									"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+									"Authorization":Authorization,
+								}
+
+								# ######os.system('echo "' + Authorization + '"');
+
+								# ######os.system('echo "' + URL + '"');
+
+								Response = requests.get( url = URL , headers = Headers );
+
+								# ######os.system('echo "ok -- > ' + URL + '"');
+
+								# print('awsecrpe2');
+								# print(Response);
+								# print(Response.text);
+								# ######os.system('echo awsecrpe2');
+								# ######os.system('echo ' + Response.text);
+								# print(Response.headers);
+
+								JSON = json.loads(Response.text);
+
+								Token = JSON["token"];
+
+								# ######os.system('echo "' + Token + '"');
+
+								Authorization = WWW_Authenticate_Array[0].split(' ')[0] + " " + Token;
+
+								# 先尝试请求上传，会得到服务器的 Headers 响应，告诉用户去哪个服务器请求 Token 值
+								URL = "https://" + Server + "/v2/" + Name_Space + "/blobs/uploads/";
+
+								Headers = {
+									
+									"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+									"Authorization":Authorization,
+
+								}
+
+								Response = requests.post( url = URL , headers = Headers );
+
+								# print('awsecrpe3');
+								# print(Response);
+								# print(Response.text);
+								# ######os.system('echo awsecrpe3');
+								# ######os.system('echo ' + Response.text);
+								# print(Response.headers);
+
+								# Response Headers:
+								# {'Date': 'Wed, 23 Jun 2021 18:38:04 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Content-Length': '61', 'Connection': 'keep-alive', 'Www-Authenticate': 'Bearer realm="https://swr.cn-south-1.myhuaweicloud.com/swr/auth/v2/registry/auth/",service="dockyard",scope="repository:object/tmp:pull"', 'Server': 'swrlb'}
+								# Response Text
+								# {"errors":[{"code":"DENIED","message":"Authenticate Error"}]}
+
+								# WWW_Authenticate_Array = Response.headers["Www-Authenticate"].split('"');
+
+
+								# 先获取 Token
+
+								# URL
+								# "https://swr.cn-south-1.myhuaweicloud.com/swr/auth/v2/registry/auth/?service=dockyard&scope=repository:object/tmp:pull,push"
+								# URL = WWW_Authenticate_Array[1] + "?service=" + WWW_Authenticate_Array[3] + "&scope=" + WWW_Authenticate_Array[5] + ",push";
+
+								# 模拟 Headers
+								# Headers = {
+								#	"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+								#	"Authorization":"Basic " + Basic_Auth,
+								# }
+
+								# Response = requests.get( url = URL , headers = Headers );
+
+								# JSON = json.loads(Response.text);
+
+								# 得到 Token
+								# "expires_in":3600
+								# Token = JSON["token"];
+
+								# print(Response);
+								# print(Response.text);
+								# print(Response.headers);
+								# print(Token);
+
+
+
+
+								# 重新请求上传地址，获取上传入口
+
+								# URL = "https://" + Server + "/v2/" + Name_Space + "/blobs/uploads/";
+
+								# WWW_Authenticate_Array[0].split(' ')[0] = "Bearer"
+								# Authorization = WWW_Authenticate_Array[0].split(' ')[0] + " " + Token;
+
+
+								# Headers = {
+									
+								#	"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+
+
+								#	"Authorization": Authorization,
+
+								# }
+
+								# Response = requests.post( url = URL , headers = Headers );
+
+								# print(Response);
+								# print(Response.text);
+								# print(Response.headers);
+
+
+
+								# 是当前传输任务的文件ID，可用于续传或取消/中止。
+								# UUID = Response.headers["Docker-Upload-Uuid"];
+
+								# 下一步上传地址
+								Location = Response.headers["Location"] + "?digest=sha256:" + SHA256;
+
+
+								# print("是否有http/https?");
+								# print(Location);
+
+
+								
+
+
+
+								# print("已经替换 是否有http/https?");
+								# print(Location);
+								break;
+							# else:
+							except:
+								os.system('echo err 24');
+								update_aws_public_token(1); # update aws ecr public token
+								time.sleep(Get_Token_Error_Time);
+								Get_Token_Error_Time = Get_Token_Error_Time + 1;
+
+						CURL = "curl -X PUT --data-binary '@offline_blob' -H 'Content-Type: application/octet-stream' -H 'Authorization: " + Authorization + "' -A 'Docker-Client/19.03.8-ce (linux)' -H 'Content-Range: 0-" + str(SIZE) + "' '" + Location + "'";
+						CURL_Error_Times_Max = 10;
+						CURL_Error_Times_Now = 0;
+						CURL_Result = -1;
+						while CURL_Error_Times_Now < CURL_Error_Times_Max:
+							CURL_Error_Times_Now = CURL_Error_Times_Now + 1;
+							CURL_Result = os.system(CURL);
+							# ######os.system('echo "err 29 code ' + str(CURL_Result) + '"');
+							if CURL_Result == 0 or CURL_Result == 13312:
+								break;
+							continue;
+						if CURL_Result != 0 and CURL_Result != 13312:
+							continue;
+
+
+						# 伪造 manifest.json
+						os.system('''cd
+		rm hello-world.manifest.json
+		aws ecr-public batch-delete-image --region us-east-1 --repository-name yunzhongzhuan --image-ids imageTag=2019.08
+		echo '{"schemaVersion": 2,"mediaType": "application/vnd.docker.distribution.manifest.v2+json","config": {"mediaType": "application/vnd.docker.container.image.v1+json","size": 21504,"digest": "sha256:'''+SHA256+'''"},"layers": [{"mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip","size": 21504,"digest": "sha256:'''+SHA256+'''"}]}' > hello-world.manifest.json
+		aws ecr-public put-image --region us-east-1 --repository-name yunzhongzhuan --image-tag 2019.08 --image-manifest file://hello-world.manifest.json
+		# curl -X HEAD https://public.ecr.aws/v2/'''+AWSDockerName+'''/blobs/sha256:'''+SHA256+'''
+		# curl -X GET -H '' https://public.ecr.aws/v2/'''+AWSDockerName+'''/blobs/sha256:'''+SHA256+'''
+		# echo ok
+		''');
+						time.sleep(0.2);
+
+						os.system('''cd
+		rm hello-world.manifest.json
+		aws ecr-public batch-delete-image --region us-east-1 --repository-name yunzhongzhuan --image-ids imageTag=2019.08''');
+
+
+
+
+						# public 下载的！
+						# aws ecr get-download-url-for-layer --region ap-east-1 --repository-name yunzhongzhuan --layer-digest sha256:42bacdb5a8c53b01fb828b0ade8947ff11489e5a423c5269ffcf450ba3ba81a7
+						# https://public.ecr.aws/v2/x3p9i2a4/yunzhongzhuan/blobs/sha256:cd427c7b17337d7c13761ca20877d2d8be661bd30415ddc17072a31a65a91b64
+						# aws ecr-public get-download-url-for-layer --region us-east-1 --repository-name yunzhongzhuan --layer-digest sha256:42bacdb5a8c53b01fb828b0ade8947ff11489e5a423c5269ffcf450ba3ba81a7
+						# Docker
+						# index.docker.io
+						# registry-1.docker.io
+						Docker = "public.ecr.aws/"+AWSDockerName;
+						Docker_Array = Docker.split('/');
+
+						# Server
+						Server = Docker_Array[0];
+
+						# 仓库地址
+						Name_Space = Docker_Array[1] + "/" + Docker_Array[2];
+
+
+						# 要下载的文件 SHA256 值
+						# SHA256 = "bd7b4cd28fcc1f62badcd21382b4d46f43ca3ada417449822fa91971cb39f7e0";
+
+						# SHA256 = input('hash:');
+
+
+
+
+
+
+						# 先尝试请求上传，会得到服务器的 Headers 响应，告诉用户去哪个服务器请求 Token 值
+
+
+
+						URL = "https://" + Server + "/v2/" + Name_Space + "/blobs/uploads/";
+
+						Headers = {
+							
+							"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+
+						}
+
+						Response = requests.get( url = URL , headers = Headers );
+
+						# print(Response);
+						# print(Response.text);
+						# print(Response.headers);
+
+						# Response Headers:
+						# {'Date': 'Wed, 23 Jun 2021 18:38:04 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Content-Length': '61', 'Connection': 'keep-alive', 'Www-Authenticate': 'Bearer realm="https://swr.cn-south-1.myhuaweicloud.com/swr/auth/v2/registry/auth/",service="dockyard",scope="repository:object/tmp:pull"', 'Server': 'swrlb'}
+						# Response Text
+						# {"errors":[{"code":"DENIED","message":"Authenticate Error"}]}
+
+						WWW_Authenticate_Array = Response.headers["Www-Authenticate"].split('"');
+
+
+
+
+
+
+
+
+
+
+
+
+						# 先获取 Token
+
+						# URL
+						# "https://swr.cn-south-1.myhuaweicloud.com/swr/auth/v2/registry/auth/?service=dockyard&scope=repository:object/tmp:pull"
+						URL = WWW_Authenticate_Array[1] + "?service=" + WWW_Authenticate_Array[3] + "&scope=" + WWW_Authenticate_Array[5];
+
+
+						# 模拟 Headers
+						Headers = {
+							"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+						}
+
+						Response = requests.get( url = URL , headers = Headers );
+
+						JSON = json.loads(Response.text);
+
+						# print(Response);
+						# print(Response.text);
+						# print(Response.headers);
+
+
+						# 得到 Token
+						# "expires_in":3600
+						Token = JSON["token"];
+
+
+						# print(Token);
+
+
+						# WWW_Authenticate_Array[0].split(' ')[0] = "Bearer"
+						Authorization = WWW_Authenticate_Array[0].split(' ')[0] + " " + Token;
+						# print(Authorization)
+
+
+
+
+
+
+
+
+						# 凭借 Token 获取下载地址
+
+
+						#指定提交的是json
+						Headers = {
+
+							"Authorization":Authorization,
+
+						}
+
+
+						# URL
+
+						URL = "https://" + Server + "/v2/" + Name_Space + "/blobs/sha256:" + SHA256;
+
+
+						Response = requests.get( url = URL , headers = Headers , allow_redirects = False );
+
+
+						# print(Response);
+						# print(Response.text);
+						# print(Response.headers);
+
+
+						# 获得下载地址
+						Location = Response.headers["Location"];
+						Location = Location.split('?')[0];
+						Location = Location.split('://')[1];
+						# print('\n');
+						# print("下载地址：" + Location)
+
+
+						AWS_Public_Download_URL = Location;
+
+
+						
+						CURL_Lock = False;
+
+
+
+
+
+
+
+
+
+					# 更新到数据库
+					Outline_Update_URL_Update = "https://apiyunzhongzhuancom.vercel.app/php/v4/offline_update_hash?offline_id="+ID+"&new_hash_id="+New_Hash_ID+"&new_hash="+SHA256+"&size="+str(SIZE)+"&name="+URL_Name+"&id="+ID+"&dhdn=1070892573/yunzhongzhuan&ghdn="+GithubDockerName+"&gldn="+GitlabDockerName+"&qdn="+QuayDockerName+"&tdn="+TreeDockerName+"&hudn="+HerokuUsDockerName+"&hedn="+HerokuEuDockerName+"&odn="+OktetoDockerName+"&awsecrpdn="+AWSDockerName+"&adn="+AzureUSDockerName+"&dodn="+DigitalOceanDockerName+"&bfcvdn="+BizflyCloudVNDockerName+"&apdu=" + AWS_Public_Download_URL+"&key=" + (hashlib.md5((SHA256+"_qq1070892573").encode(encoding='UTF-8')).hexdigest());
+
+					######os.system('echo "' + Outline_Update_URL_Update + '"');
+
+
+
+
+					# 最终完成离线
+					Outline_Update_Response_Headers_Status_Code = -1;
+					Outline_Update_Response_Headers_Status_Code_Error_Times_Max = 10;
+					Outline_Update_Response_Headers_Status_Code_Error_Times_Now = 0;
+					while Outline_Update_Response_Headers_Status_Code!=200:
+						if Outline_Update_Response_Headers_Status_Code_Error_Times_Now > Outline_Update_Response_Headers_Status_Code_Error_Times_Max:
+							os.system('echo err offline 01');
+							1 + "1";
+						try:
+							Outline_Update_Response_Update = requests.get( url = Outline_Update_URL_Update );
+							Outline_Update_Response_Headers_Status_Code = Outline_Update_Response_Update.status_code;
+							Outline_Update_Response_Headers_Status_Code_Error_Times_Now = Outline_Update_Response_Headers_Status_Code_Error_Times_Now + 1;
+						except:
+							pass
+					# os.system("echo '" + Outline_Update_URL_Update +  "'");
+					# os.system("echo 'ouru success'");
+					# os.system("echo '" + Outline_Update_Response_Update.text +  "'");
+
+					# 告诉服务器我备份完成了
+					# URL = "https://apiyunzhongzhuancom.vercel.app/php/v4/outline_gms_by_id?id="+ID+"&key="+(hashlib.md5((ID+"_qq1070892573").encode(encoding='UTF-8')).hexdigest()) + "&ghdn=" + GithubDockerName + "&gldn=" + GitlabDockerName+"&qdn="+QuayDockerName+"&tdn="+TreeDockerName+"&hudn="+HerokuUsDockerName+"&hedn="+HerokuEuDockerName+"&odn="+OktetoDockerName+"&awsecrpdn="+AWSDockerName+"&adn="+AzureUSDockerName+"&dodn="+DigitalOceanDockerName;
+					# print(URL);
+					# 完成 告诉服务器 我已经完成 从 docker 推送到 github
+					# Response = requests.get(url=URL);
+
+
+
+					time.sleep(5);
+
+
+					continue;
+
+
+
+
+
+					# 单次提交大小 5 M
+					LENGTH =  500 * 1024 * 1024;
+					# 计算需要上传多少次
+					# 文件大小/提交大小
+					TIMES = int( math.ceil( SIZE / LENGTH ) );
+					# 读入文件
+					File = open(File_Path, 'rb');
+					# 开始循环上传
+					for x in range(0,TIMES):
+						# 本次提交上传的数据
+						Temp_Data = bytes()
+						# 咬入/读入一段文件
+						Temp_Data += File.read( LENGTH );
+						Headers = {
+							"Content-Type": "application/octet-stream",
+							"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+							"Authorization": Authorization,
+							# "Docker-Upload-UUID":UUID,
+						}
+						# 如果是最后一次
+						if( int(x+1) == TIMES ):
+							# 最后一次提交上传时，需要用到的结束/结尾地址。
+							Location = Location + "&digest=sha256:" + SHA256;
+							# 最后一次上传请求头
+							Headers["Content-Range"] = str( x * LENGTH ) + "-" + str( SIZE );
+							# 最后一次上传，使用 put
+							Response = requests.put( url = Location , data = Temp_Data , headers = Headers );
+							# 完成
+							# print("任务完成！")
+							# print(Response)
+							# print(Response.headers)
+							# print(Response.text)
+
+
+
+
+
+
+
+
+
+
+							pass
+						else:
+							# 当前提交的文件，所在源文件的段
+							Headers["Content-Range"] =  str( x * LENGTH ) + "-" + str( ( (x+1) * LENGTH ) -1 );
+							# 非最后一次上传，都使用 patch
+							Response = requests.patch( url = Location , data= Temp_Data , headers = Headers );
+							# 更新最新的上传地址
+							Location = Response.headers["Location"];
+							# 继续
+							# print("继续上传！")
+							# print(Response)
+							# print(Response.headers)
+							# print(Response.text)
+						pass
+				else:
+					Outline_Update_URL = "https://apiyunzhongzhuancom.vercel.app/php/offline_delete_by_id?id="+ID+"&key="+(hashlib.md5((ID+"_qq1070892573").encode(encoding='UTF-8')).hexdigest());
+					Outline_Update_Response = requests.get( url = Outline_Update_URL );
+					pass
+		else:
+			Outline_Update_URL = "https://apiyunzhongzhuancom.vercel.app/php/offline_delete_by_id?id="+ID+"&key="+(hashlib.md5((ID+"_qq1070892573").encode(encoding='UTF-8')).hexdigest());
+			Outline_Update_Response = requests.get( url = Outline_Update_URL );
+			pass
+	
+
+
+
+
+	pass
+
+
+
+
+
+
+
+# 启动离线系统
+_thread.start_new_thread(outline_system, ( 1 ,) );
+
+
+
+# 决定延迟多少秒之后，启动一台新的服务器。
+New_Start_Timeout = ( random.randint(0,10) + 15 ) * 60;
+Stop = False;
+UploadStop = False;
+Exit = False;
+def CreateNewServer(timeout):
+
+	global Stop;
+
+	global Exit;
+
+	time.sleep(timeout);
+
+	Stop = True;
+
+	MaxWaitTime = 5.2*60*60; # 最迟不能超过20s
+
+	MaxWaitNow = 0;
+
+	while UploadStop != True and MaxWaitTime != MaxWaitNow:
+
+		MaxWaitNow = MaxWaitNow + 1;
+
+		time.sleep(1);
+
+	while OutlineStop != True and MaxWaitTime != MaxWaitNow:
+
+		MaxWaitNow = MaxWaitNow + 1;
+
+		time.sleep(1);
+
+	New_Start_Status_Code = 401;
+
+	while New_Start_Status_Code == 401:
+
+		# 接着让下一个账号挨揍
+		try:
+			url = "https://apiyunzhongzhuancom.vercel.app/php/temp/gpr/new_actions_o";
+			response = requests.get(url = url);
+			response_json = json.loads(response.text);
+			payload = json.dumps({"ref": "main",});
+			header = {'Authorization': 'token '+response_json["token"],"Accept": "application/vnd.github.v3+json"};
+			response_decoded_json = requests.post(f'https://api.github.com/repos/'+response_json["username"]+'/'+response_json["project"]+'/actions/workflows/gmso.yml/dispatches',data=payload, headers=header);
+			New_Start_Status_Code = response_decoded_json.status_code;
+			# print(response_decoded_json);
+			# print(response_decoded_json.headers);
+			# print(response_decoded_json.text);
+			# 由于一台服务器限制单次运行最大时间为 6 小时，所以需要在即将结束的前10分钟，继续启动了一台服务器。
+			# 启动一台 Github Actions 服务器
+		except:
+			os.system('echo err 10');
+			pass
+
+	Exit = True;
+
+_thread.start_new_thread(CreateNewServer, ( New_Start_Timeout ,) );
+
+
+# 计算文件 SHA256 值
+'''
+def CalcFileSha256(filname):
+	with open(filname, "rb") as f:
+		sha256obj = hashlib.sha256();
+		sha256obj.update(f.read());
+		hash_value = sha256obj.hexdigest();
+		return hash_value;
+'''
+
+def main(t):
+
+	global Exit;
+
+	global Stop;
+
+	global UploadStop;
+
+	global CURL_Lock;
+
+	global OutlineStop;
+
+
+	global GithubDockerName;
+
+	global Github_Basic_Auth;
+
+	global GitlabDockerName;
+
+	global Gitlab_Basic_Auth;
+
+
+	global OktetoDockerName;
+
+	global Okteto_Basic_Auth;
+
+
+	global QuayDockerName;
+
+	global Quay_Basic_Auth;
+
+	global TreeDockerName;
+
+	global Tree_Basic_Auth;
+
+	global HerokuUsDockerName;
+
+	global HerokuEuDockerName;
+
+	global HerokuUs_Basic_Auth;
+	
+	global HerokuEu_Basic_Auth;
+
+	global AWSDockerName;
+
+	global AWS_Basic_Auth;
+
+	global AzureUSDockerName;
+
+	global AzureUS_Basic_Auth;
+
+
+
+	global BizflyCloudVNDockerName;
+	global BizflyCloudVN_Basic_Auth;
+
+	global DigitalOceanDockerName;
+
+	global DigitalOcean_Basic_Auth;
+
+	while True:
+
+
+		if Stop == True:
+
+			UploadStop = True;
+
+			break;
+
+		# 先查询还没有完成转发的文件
+		URL = "https://apiyunzhongzhuancom.vercel.app/php/temp/gpr/index_o?t=" + str( time.time() ) ;
+
+
+		Send_OK_Times_Max = 10;
+		Send_OK_Times_Now = 0;
+		Response_Text = "";
+		while Send_OK_Times_Now < Send_OK_Times_Max:
+			try:
+				Response = requests.get(url=URL);
+				Response_Text = Response.text;
+				Send_OK_Times_Now = 20;
+
+			except:
+				Send_OK_Times_Now = Send_OK_Times_Now + 1;
+				if Send_OK_Times_Now == Send_OK_Times_Max:
+					Stop == True;
+					break;
+				pass
+
+
+		if ( Send_OK_Times_Now == Send_OK_Times_Max ) or Response_Text == "" :
+			continue;
+
+
+		URL = "";
+
+		# print(Resonse);
+		# print(Resonse.headers);
+		# print(Resonse.text);
+
+		try:
+
+			ResponseJSON = json.loads(Response_Text);
+
+		except:
+
+			os.system('echo err 11');
+
+			# ######os.system('echo request yunzhongzhuan error');
+
+			#　print('request yunzhongzhuan error ');
+
+			continue;
+
+		for x1 in range(0,len(ResponseJSON)):
+
+			if Stop == True:
+
+				UploadStop = True;
+
+				break;
+
+			while CURL_Lock == True:
+				time.sleep(random.randint(1,5));
+			CURL_Lock = True;
+
+			# print(ResponseJSON[x]);
+
+			# 下载这个文件
+			# 下载这个文件
+			# Docker
+			# index.docker.io
+			# registry-1.docker.io
+			Docker = "index.docker.io/"+ResponseJSON[x1]["DockerName"];
+			Docker_Array = Docker.split('/');
+			# Server
+			Server = Docker_Array[0];
+			# 仓库地址
+			Name_Space = Docker_Array[1] + "/" + Docker_Array[2];
+			# 要下载的文件 SHA256 值
+			SHA256 = ResponseJSON[x1]["DockerFileSHA256"];
+			# 先尝试请求上传，会得到服务器的 Headers 响应，告诉用户去哪个服务器请求 Token 值
+			URL = "https://" + Server + "/v2/" + Name_Space + "/blobs/uploads/";
+			Headers = {
+				"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+			}
+			Response = requests.get( url = URL , headers = Headers );
+			# print(Response);
+			# print(Response.text);
+			# print(Response.headers);
+			# Response Headers:
+			# {'Date': 'Wed, 23 Jun 2021 18:38:04 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Content-Length': '61', 'Connection': 'keep-alive', 'Www-Authenticate': 'Bearer realm="https://swr.cn-south-1.myhuaweicloud.com/swr/auth/v2/registry/auth/",service="dockyard",scope="repository:object/tmp:pull"', 'Server': 'swrlb'}
+			# Response Text
+			# {"errors":[{"code":"DENIED","message":"Authenticate Error"}]}
+			WWW_Authenticate_Array = Response.headers["Www-Authenticate"].split('"');
+			# 先获取 Token
+			# URL
+			# "https://swr.cn-south-1.myhuaweicloud.com/swr/auth/v2/registry/auth/?service=dockyard&scope=repository:object/tmp:pull"
+			URL = WWW_Authenticate_Array[1] + "?service=" + WWW_Authenticate_Array[3] + "&scope=" + WWW_Authenticate_Array[5];
+			# 模拟 Headers
+			Headers = {
+				"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+			}
+			Response = requests.get( url = URL , headers = Headers );
+			JSON = json.loads(Response.text);
+			# Token = requests.get(url = "https://green-mountain-2a25.xiaowennets.workers.dev/" + Name_Space).text;
+			# 得到 Token
+			# "expires_in":3600
+			Token = JSON["access_token"];
+			# print(Response);
+			# print(Response.text);
+			# print(Response.headers);
+			# print(Token);
+			# WWW_Authenticate_Array[0].split(' ')[0] = "Bearer"
+			Authorization = WWW_Authenticate_Array[0].split(' ')[0] + " " + Token;
+			# print(Authorization)
+			# 凭借 Token 获取下载地址
+			#指定提交的是json
+			Headers = {
+				"Authorization":Authorization,
+			}
+			# URL
+			# "https://index.docker.io/v2/107089225508/yunzhongzhuan/blobs/sha256:7112df22386a44484143e2cf079ccc6bb566866d9825070b24b8d82e276dfff0"
+			URL = "https://" + Server + "/v2/" + Name_Space + "/blobs/sha256:" + SHA256;
+			Response = requests.head( url = URL , headers = Headers );
+			# print(Response);
+			# print(Response.text);
+			# print(Response.headers);
+			# 获得下载地址
+			try:
+				Location = Response.headers["Location"];
+			except:
+				os.system('echo err 12');
+				# 告诉服务器 文件丢失
+				URL = "https://apiyunzhongzhuancom.vercel.app/php/temp/gpr/ok?size=404&id="+str(ResponseJSON[x1]["ID"])+"&hash="+ResponseJSON[x1]["DockerFileSHA256"]+"&status=404&ghdn=404&gldn=404&qdn=404&tdn=404&hudn=404&hedn=404&odn=404&awsecrpdn=404&adn=404&dodn=404&&bfcvdn=404";
+				######os.system('echo ' + URL );
+				# print( URL );
+				# 完成 告诉服务器 我已经完成 从 docker 推送到 github
+				try:
+					Response = requests.get(url=URL);
+					os.system('echo err 12 request ed continue' );
+					Stop = True;
+					UploadStop = True;
+					break;
+					continue;
+				except:
+					Stop = True;
+					UploadStop = True;
+					break;
+					continue;
+			# print('\n');
+			# print("下载地址：" + Location)
+
+
+
+			# os.system("wget -O ./blob '" + Location + "' >/dev/null 2>&1 &");
+
+
+			CURL = "curl -X GET -o blob -L '" + Location + "'";
+			CURL_Error_Times_Max = 10;
+			CURL_Error_Times_Now = 0;
+			CURL_Result = -1;
+			while CURL_Error_Times_Now < CURL_Error_Times_Max:
+				CURL_Error_Times_Now = CURL_Error_Times_Now + 1;
+				CURL_Result = os.system(CURL);
+				# ######os.system('echo "err 29 code ' + str(CURL_Result) + '"');
+				if CURL_Result == 0 or CURL_Result == 13312:
+					break;
+				continue;
+			if CURL_Result != 0 and CURL_Result != 13312:
+				continue;
+			CURL_Lock = False;
+
+			
+
+
+			File_Path = "./blob";
+
+			# 等待文件出现
+			while os.path.exists(File_Path) == False:
+				time.sleep(1);
+
+			# 上传到 Github Package Registry 备份
+
+
+			# 文件大小是否正确
+			while str( os.path.getsize(File_Path) ) != ResponseJSON[x1]["FileSize"]:
+				time.sleep(1);
+
+
+
+
+			# SHA256 = CalcFileSha256(File_Path);
+			# SHA256 = os.popen('sha256sum blob');
+			# SHA256 = str(SHA256)[0:64];
+			SHA256 = ResponseJSON[x1]["DockerFileSHA256"];
+			# print(SHA256);
+
+			SIZE = os.path.getsize(File_Path);
+			# print(SIZE);
+
+
+
+
+			# Github Package Registry 不允许续传 需要一次性提交
+			# 单次提交大小 20 GB
+			LENGTH =  SIZE;
+
+
+
+
+
+
+
+
+
+
+			# if int(ResponseJSON[x1]["BizflyCloudVNMirrorStatus"])<1 and SIZE <= 1330 * 1024 * 1024:
+			if False:
+
+
+				# Docker
+				# index.docker.io
+				# registry-1.docker.io
+				os.system('echo bfcv');
+				Docker = "cr-hn-1.bizflycloud.vn/" + BizflyCloudVNDockerName;
+				Docker_Array = Docker.split('/');
+				# Server
+				Server = Docker_Array[0];
+				# 仓库地址
+				Name_Space = Docker_Array[1] + "/" + Docker_Array[2];
+
+
+				# 先尝试请求上传，会得到服务器的 Headers 响应，告诉用户去哪个服务器请求 Token 值
+				URL = "https://" + Server + "/v2/" + Name_Space + "/blobs/uploads/";
+				Headers = {
+					"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+				}
+
+				while CURL_Lock == True:
+					time.sleep(random.randint(1,5));
+				CURL_Lock = True;
+				Response = requests.get( url = URL , headers = Headers );
+				# print(Response);
+				# print(Response.text);
+				# print(Response.headers);
+				# Response Headers:
+				# {'Date': 'Wed, 23 Jun 2021 18:38:04 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Content-Length': '61', 'Connection': 'keep-alive', 'Www-Authenticate': 'Bearer realm="https://swr.cn-south-1.myhuaweicloud.com/swr/auth/v2/registry/auth/",service="dockyard",scope="repository:object/tmp:pull"', 'Server': 'swrlb'}
+				# Response Text
+				# {"errors":[{"code":"DENIED","message":"Authenticate Error"}]}
+				WWW_Authenticate_Array = Response.headers["Www-Authenticate"].split('"');
+				# 先获取 Token
+				# 先获取 Token
+
+				# URL
+				# "https://swr.cn-south-1.myhuaweicloud.com/swr/auth/v2/registry/auth/?service=dockyard&scope=repository:object/tmp:pull,push"
+				URL = WWW_Authenticate_Array[1] + "?service=" + WWW_Authenticate_Array[3] + "&scope=" + WWW_Authenticate_Array[5] + ",push";
+
+				# Data = "grant_type=password&client_id=1&username=" + Username + "&password=" + Password + "&service=" + WWW_Authenticate_Array[3] + "&scope=" + WWW_Authenticate_Array[5] + ",push";
+				# 模拟 Headers
+				# 模拟 Headers
+				Headers = {
+					"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+					"Authorization":"Basic " + BizflyCloudVN_Basic_Auth,
+				}
+
+				Response = requests.get( url = URL , headers = Headers );
+				JSON = json.loads(Response.text);
+				# print(JSON);
+				Token = JSON["token"];
+				# print(Response);
+				# print(Response.text);
+				# print(Response.headers);
+				# print(Token);
+				# 重新请求上传地址，获取上传入口
+				URL = "https://" + Server + "/v2/" + Name_Space + "/blobs/uploads/";
+				# WWW_Authenticate_Array[0].split(' ')[0] = "Bearer"
+				Authorization = WWW_Authenticate_Array[0].split(' ')[0] + " " + Token;
+				Headers = {
+					"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+					"Authorization": Authorization,
+				}
+				Response = requests.post( url = URL , headers = Headers );
+				# print(Response);
+				# print(Response.text);
+				# print(Response.headers);
+				# 是当前传输任务的文件ID，可用于续传或取消/中止。
+				UUID = Response.headers["Docker-Upload-Uuid"];
+				# 下一步上传地址
+				Location = Response.headers["Location"];
+
+				# 最后一次提交上传时，需要用到的结束/结尾地址。
+				Location = Location + "&digest=sha256:" + SHA256;
+
+				CURL = "curl -X PUT --data-binary '@blob' -H 'Content-Type: application/octet-stream' -H 'Authorization: " + Authorization + "' -H 'Docker-Upload-UUID: " + UUID + "' -A 'Docker-Client/19.03.8-ce (linux)' -H 'Content-Range: 0-" + str(SIZE) + "' '" + Location + "'";
+				CURL_Error_Times_Max = 10;
+				CURL_Error_Times_Now = 0;
+				CURL_Result = -1;
+				while CURL_Error_Times_Now < CURL_Error_Times_Max:
+					CURL_Error_Times_Now = CURL_Error_Times_Now + 1;
+					CURL_Result = os.system(CURL);
+					# ######os.system('echo "err 29 code ' + str(CURL_Result) + '"');
+					if CURL_Result == 0 or CURL_Result == 13312:
+						break;
+					continue;
+				if CURL_Result != 0 and CURL_Result != 13312:
+					continue;
+				CURL_Lock = False;
+
+
+
+
+
+
+
+
+
+
+
+
+
+			if int(ResponseJSON[x1]["GitlabMirrorStatus"])<1:
+
+
+				os.system('echo gl');
+
+
+				# Docker
+				Docker = "registry.gitlab.com/" + GitlabDockerName;
+				Docker_Array = Docker.split('/');
+
+				# Server
+				Server = Docker_Array[0];
+
+				# 仓库地址
+				Name_Space = Docker_Array[1] + "/" + Docker_Array[2];
+
+				# 容器镜像服务登录密码
+				# 从华为云控制台获取
+				# https://console.huaweicloud.com/swr/?region=cn-south-1#/app/dashboard
+				# Base64_encode({Username}:{Password})
+				Basic_Auth = Gitlab_Basic_Auth;
+
+
+				# 先尝试请求上传，会得到服务器的 Headers 响应，告诉用户去哪个服务器请求 Token 值
+				URL = "https://" + Server + "/v2/" + Name_Space + "/blobs/sha256:" + SHA256;
+
+				Headers = {
+					"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+				}
+
+				while CURL_Lock == True:
+					time.sleep(random.randint(1,5));
+				CURL_Lock = True;
+
+
+				Get_Token_Error_Time = 0;
+				while True:
+					if Get_Token_Error_Time >= 10:
+						2 + "2";
+					try:
+						Response = requests.get( url = URL , headers = Headers );
+
+						# print(Response);
+						# print(Response.text);
+						# print(Response.headers);
+
+						# Response Headers:
+						# {'Date': 'Wed, 23 Jun 2021 18:38:04 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Content-Length': '61', 'Connection': 'keep-alive', 'Www-Authenticate': 'Bearer realm="https://swr.cn-south-1.myhuaweicloud.com/swr/auth/v2/registry/auth/",service="dockyard",scope="repository:object/tmp:pull"', 'Server': 'swrlb'}
+						# Response Text
+						# {"errors":[{"code":"DENIED","message":"Authenticate Error"}]}
+
+						WWW_Authenticate_Array = Response.headers["Www-Authenticate"].split('"');
+
+
+						# 先获取 Token
+
+						# URL
+						# "https://swr.cn-south-1.myhuaweicloud.com/swr/auth/v2/registry/auth/?service=dockyard&scope=repository:object/tmp:pull,push"
+						URL = WWW_Authenticate_Array[1] + "?service=" + WWW_Authenticate_Array[3] + "&scope=" + WWW_Authenticate_Array[5] + ",push";
+
+						# 模拟 Headers
+						Headers = {
+							"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+							"Authorization":"Basic " + Basic_Auth,
+						}
+
+						Response = requests.get( url = URL , headers = Headers );
+
+						JSON = json.loads(Response.text);
+
+						# 得到 Token
+						# "expires_in":3600
+						Token = JSON["token"];
+
+						# print(Response);
+						# print(Response.text);
+						# print(Response.headers);
+						# print(Token);
+
+
+
+
+						# 重新请求上传地址，获取上传入口
+
+						URL = "https://" + Server + "/v2/" + Name_Space + "/blobs/uploads/";
+
+						# WWW_Authenticate_Array[0].split(' ')[0] = "Bearer"
+						Authorization = WWW_Authenticate_Array[0].split(' ')[0] + " " + Token;
+
+
+						Headers = {
+							
+							"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+
+
+							"Authorization": Authorization,
+
+						}
+
+						Response = requests.post( url = URL , headers = Headers );
+
+						# print(Response);
+						# print(Response.text);
+						# print(Response.headers);
+
+
+
+
+
+						# 是当前传输任务的文件ID，可用于续传或取消/中止。
+						UUID = Response.headers["Docker-Upload-Uuid"];
+
+						# 下一步上传地址
+						Location = Response.headers["Location"];
+
+
+						# print("是否有http/https?");
+						# print(Location);
+
+
+						Location = Location + "&digest=sha256:" + SHA256;
+
+
+
+						# print("已经替换 是否有http/https?");
+						# print(Location);
+						break;
+					except:
+						os.system('echo err 14');
+						time.sleep(Get_Token_Error_Time);
+						Get_Token_Error_Time = Get_Token_Error_Time + 1;
+
+				CURL = "curl -X PUT --data-binary '@blob' -H 'Content-Type: application/octet-stream' -H 'Authorization: " + Authorization + "' -H 'Docker-Upload-UUID: " + UUID + "' -A 'Docker-Client/19.03.8-ce (linux)' -H 'Content-Range: 0-" + str(SIZE) + "' '" + Location + "'";
+
+
+				CURL_Error_Times_Max = 10;
+				CURL_Error_Times_Now = 0;
+				CURL_Result = -1;
+				while CURL_Error_Times_Now < CURL_Error_Times_Max:
+					CURL_Error_Times_Now = CURL_Error_Times_Now + 1;
+					CURL_Result = os.system(CURL);
+					# ######os.system('echo "err 29 code ' + str(CURL_Result) + '"');
+					if CURL_Result == 0 or CURL_Result == 13312:
+						break;
+					continue;
+				if CURL_Result != 0 and CURL_Result != 13312:
+					continue;
+				CURL_Lock = False;
+
+
+			# ######os.system('echo success');
+
+
+
+
+
+
+			if int(ResponseJSON[x1]["OktetoMirrorStatus"])<1:
+
+				os.system('echo o');
+
+				# Okteto
+				# Docker
+				Docker = "registry.cloud.okteto.net/" + OktetoDockerName;
+				Docker_Array = Docker.split('/');
+
+				# Server
+				Server = Docker_Array[0];
+
+				# 仓库地址
+				Name_Space = Docker_Array[1] + "/" + Docker_Array[2];
+
+				# 容器镜像服务登录密码
+				# 从华为云控制台获取
+				# https://console.huaweicloud.com/swr/?region=cn-south-1#/app/dashboard
+				# Base64_encode({Username}:{Password})
+				Basic_Auth = Okteto_Basic_Auth;
+
+
+				# 先尝试请求上传，会得到服务器的 Headers 响应，告诉用户去哪个服务器请求 Token 值
+				URL = "https://" + Server + "/v2/" + Name_Space + "/blobs/uploads/"; # + SHA256;
+
+				Headers = {
+					"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+				}
+
+				while CURL_Lock == True:
+					time.sleep(random.randint(1,5));
+				CURL_Lock = True;
+
+
+				Get_Token_Error_Time = 0;
+				while True:
+					if Get_Token_Error_Time >= 10:
+						UploadStop = True;
+						OutlineStop = True;
+						Stop = True;
+						2 + "2";
+					# if True:
+					try:
+						Response = requests.post( url = URL , headers = Headers );
+
+						# print(Response);
+						# print(Response.text);
+						# print(Response.headers);
+
+						# Response Headers:
+						# {'Date': 'Wed, 23 Jun 2021 18:38:04 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Content-Length': '61', 'Connection': 'keep-alive', 'Www-Authenticate': 'Bearer realm="https://swr.cn-south-1.myhuaweicloud.com/swr/auth/v2/registry/auth/",service="dockyard",scope="repository:object/tmp:pull"', 'Server': 'swrlb'}
+						# Response Text
+						# {"errors":[{"code":"DENIED","message":"Authenticate Error"}]}
+
+						WWW_Authenticate_Array = Response.headers["Www-Authenticate"].split('"');
+
+
+						# 先获取 Token
+
+						# URL
+						# "https://swr.cn-south-1.myhuaweicloud.com/swr/auth/v2/registry/auth/?service=dockyard&scope=repository:object/tmp:pull,push"
+						URL = WWW_Authenticate_Array[1] + "?service=" + WWW_Authenticate_Array[3] + "&scope=" + WWW_Authenticate_Array[5] + ",push";
+
+						# 模拟 Headers
+						Headers = {
+							"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+							"Authorization":"Basic " + Basic_Auth,
+						}
+
+						Response = requests.post( url = URL , headers = Headers );
+
+						JSON = json.loads(Response.text);
+
+						# 得到 Token
+						# "expires_in":3600
+						Token = JSON["access_token"];
+
+						# print(Response);
+						# print(Response.text);
+						# print(Response.headers);
+						# print(Token);
+
+
+
+
+						# 重新请求上传地址，获取上传入口
+
+						URL = "https://" + Server + "/v2/" + Name_Space + "/blobs/uploads/";
+
+						# WWW_Authenticate_Array[0].split(' ')[0] = "Bearer"
+						Authorization = WWW_Authenticate_Array[0].split(' ')[0] + " " + Token;
+
+
+						Headers = {
+							
+							"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+
+
+							"Authorization": Authorization,
+
+						}
+
+						Response = requests.post( url = URL , headers = Headers );
+
+						# print(Response);
+						# print(Response.text);
+						# print(Response.headers);
+
+
+
+
+
+						# 是当前传输任务的文件ID，可用于续传或取消/中止。
+						UUID = Response.headers["Docker-Upload-Uuid"];
+
+						# 下一步上传地址
+						# Location = Response.headers["Location"];
+
+
+						# print("是否有http/https?");
+						# print(Location);
+
+
+						Location = Response.headers["Location"] + "&digest=sha256:" + SHA256;
+
+
+
+						# print("已经替换 是否有http/https?");
+						# print(Location);
+						break;
+					# else:
+					except:
+						os.system('echo err 7-2');
+						time.sleep(Get_Token_Error_Time);
+						Get_Token_Error_Time = Get_Token_Error_Time + 1;
+
+
+				CURL = "curl -X PUT --data-binary '@blob' -H 'Content-Type: application/octet-stream' -H 'Authorization: " + Authorization + "' -H 'Docker-Upload-UUID: " + UUID + "' -A 'Docker-Client/19.03.8-ce (linux)' -H 'Content-Range: 0-" + str(SIZE) + "' '" + Location + "'";
+				# ######os.system('echo ' + CURL);
+
+				CURL_Error_Times_Max = 10;
+				CURL_Error_Times_Now = 0;
+				CURL_Result = -1;
+				while CURL_Error_Times_Now < CURL_Error_Times_Max:
+					CURL_Error_Times_Now = CURL_Error_Times_Now + 1;
+					CURL_Result = os.system(CURL);
+					# ######os.system('echo "err 29 code ' + str(CURL_Result) + '"');
+					if CURL_Result == 0 or CURL_Result == 13312:
+						break;
+					continue;
+				if CURL_Result != 0 and CURL_Result != 13312:
+					continue;
+				CURL_Lock = False;
+
+
+
+
+
+
+
+
+
+			if int(ResponseJSON[x1]["GithubMirrorStatus"])<1:
+
+				os.system('echo gh');
+
+				# Docker
+				Docker = "ghcr.io/" + GithubDockerName;
+				Docker_Array = Docker.split('/');
+
+				# Server
+				Server = Docker_Array[0];
+
+				# 仓库地址
+				Name_Space = Docker_Array[1] + "/" + Docker_Array[2];
+
+				# 容器镜像服务登录密码
+				# 从华为云控制台获取
+				# https://console.huaweicloud.com/swr/?region=cn-south-1#/app/dashboard
+				# Base64_encode({Username}:{Password})
+				Basic_Auth = Github_Basic_Auth;
+
+
+				# 先尝试请求上传，会得到服务器的 Headers 响应，告诉用户去哪个服务器请求 Token 值
+				URL = "https://" + Server + "/v2/" + Name_Space + "/blobs/sha256:" + SHA256;
+
+				Headers = {
+					"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+				}
+
+				while CURL_Lock == True:
+					time.sleep(random.randint(1,5));
+				CURL_Lock = True;
+
+
+				Get_Token_Error_Time = 0;
+				while True:
+					if Get_Token_Error_Time >= 10:
+						2 + "2";
+					try:
+						Response = requests.get( url = URL , headers = Headers );
+
+						# print(Response);
+						# print(Response.text);
+						# print(Response.headers);
+
+						# Response Headers:
+						# {'Date': 'Wed, 23 Jun 2021 18:38:04 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Content-Length': '61', 'Connection': 'keep-alive', 'Www-Authenticate': 'Bearer realm="https://swr.cn-south-1.myhuaweicloud.com/swr/auth/v2/registry/auth/",service="dockyard",scope="repository:object/tmp:pull"', 'Server': 'swrlb'}
+						# Response Text
+						# {"errors":[{"code":"DENIED","message":"Authenticate Error"}]}
+
+						WWW_Authenticate_Array = Response.headers["Www-Authenticate"].split('"');
+
+
+						# 先获取 Token
+
+						# URL
+						# "https://swr.cn-south-1.myhuaweicloud.com/swr/auth/v2/registry/auth/?service=dockyard&scope=repository:object/tmp:pull,push"
+						URL = WWW_Authenticate_Array[1] + "?service=" + WWW_Authenticate_Array[3] + "&scope=" + WWW_Authenticate_Array[5] + ",push";
+
+						# 模拟 Headers
+						Headers = {
+							"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+							"Authorization":"Basic " + Basic_Auth,
+						}
+
+						Response = requests.get( url = URL , headers = Headers );
+
+						JSON = json.loads(Response.text);
+
+						# 得到 Token
+						# "expires_in":3600
+						Token = JSON["token"];
+
+						# print(Response);
+						# print(Response.text);
+						# print(Response.headers);
+						# print(Token);
+
+
+
+
+						# 重新请求上传地址，获取上传入口
+
+						URL = "https://" + Server + "/v2/" + Name_Space + "/blobs/uploads/";
+
+						# WWW_Authenticate_Array[0].split(' ')[0] = "Bearer"
+						Authorization = WWW_Authenticate_Array[0].split(' ')[0] + " " + Token;
+
+
+						Headers = {
+							
+							"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+
+
+							"Authorization": Authorization,
+
+						}
+
+						Response = requests.post( url = URL , headers = Headers );
+
+						# print(Response);
+						# print(Response.text);
+						# print(Response.headers);
+
+
+
+
+
+						# 是当前传输任务的文件ID，可用于续传或取消/中止。
+						UUID = Response.headers["Docker-Upload-Uuid"];
+
+						# 下一步上传地址
+						Location = Response.headers["Location"];
+
+
+						# print("是否有http/https?");
+						# print(Location);
+
+
+						Location = "https://" + Server + Location + "?digest=sha256:" + SHA256;
+
+						# print("已经替换 是否有http/https?");
+						# print(Location);
+						break;
+					except:
+						os.system('echo err 13');
+						time.sleep(Get_Token_Error_Time);
+						Get_Token_Error_Time = Get_Token_Error_Time + 1;
+
+
+				CURL = "curl -X PUT --data-binary '@blob' -H 'Content-Type: application/octet-stream' -H 'Authorization: " + Authorization + "' -H 'Docker-Upload-UUID: " + UUID + "' -A 'Docker-Client/19.03.8-ce (linux)'  " + Location; # -H 'Content-Range: 0-" + str(SIZE) + "'
+
+
+				CURL_Error_Times_Max = 10;
+				CURL_Error_Times_Now = 0;
+				CURL_Result = -1;
+				while CURL_Error_Times_Now < CURL_Error_Times_Max:
+					CURL_Error_Times_Now = CURL_Error_Times_Now + 1;
+					CURL_Result = os.system(CURL);
+					# ######os.system('echo "err 29 code ' + str(CURL_Result) + '"');
+					if CURL_Result == 0 or CURL_Result == 13312:
+						break;
+					continue;
+				if CURL_Result != 0 and CURL_Result != 13312:
+					continue;
+				CURL_Lock = False;
+
+
+
+
+
+			if int(ResponseJSON[x1]["TreeMirrorStatus"])<1:
+
+				os.system('echo t');
+
+				# Tree
+
+				# Docker
+				Docker = "repo.treescale.com/" + TreeDockerName;
+				Docker_Array = Docker.split('/');
+
+				# Server
+				Server = Docker_Array[0];
+
+				# 仓库地址
+				Name_Space = Docker_Array[1] + "/" + Docker_Array[2];
+
+				# 容器镜像服务登录密码
+				# 从华为云控制台获取
+				# https://console.huaweicloud.com/swr/?region=cn-south-1#/app/dashboard
+				# Base64_encode({Username}:{Password})
+				Basic_Auth = Tree_Basic_Auth;
+
+
+				# 先尝试请求上传，会得到服务器的 Headers 响应，告诉用户去哪个服务器请求 Token 值
+				URL = "https://" + Server + "/v2/" + Name_Space + "/blobs/uploads/" #  + SHA256;
+
+				Headers = {
+					"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+				}
+
+				while CURL_Lock == True:
+					time.sleep(random.randint(1,5));
+				CURL_Lock = True;
+
+
+				Get_Token_Error_Time = 0;
+				while True:
+					if Get_Token_Error_Time >= 10:
+
+
+						try:
+							File.close();
+						except:
+							os.system('echo err 15');
+							pass
+
+						2 + "2";
+					# if True:
+					try:
+						Response = requests.get( url = URL , headers = Headers );
+
+						# print(Response);
+						# print(Response.text);
+						# print(Response.headers);
+
+						# Response Headers:
+						# {'Date': 'Wed, 23 Jun 2021 18:38:04 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Content-Length': '61', 'Connection': 'keep-alive', 'Www-Authenticate': 'Bearer realm="https://swr.cn-south-1.myhuaweicloud.com/swr/auth/v2/registry/auth/",service="dockyard",scope="repository:object/tmp:pull"', 'Server': 'swrlb'}
+						# Response Text
+						# {"errors":[{"code":"DENIED","message":"Authenticate Error"}]}
+
+						WWW_Authenticate_Array = Response.headers["Www-Authenticate"].split('"');
+
+
+						# 先获取 Token
+
+						# URL
+						# "https://swr.cn-south-1.myhuaweicloud.com/swr/auth/v2/registry/auth/?service=dockyard&scope=repository:object/tmp:pull,push"
+						URL = WWW_Authenticate_Array[1] + "?service=" + WWW_Authenticate_Array[3] + "&scope=" + WWW_Authenticate_Array[5] + ",push";
+
+						# 模拟 Headers
+						Headers = {
+							"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+							"Authorization":"Basic " + Basic_Auth,
+						}
+
+						Response = requests.get( url = URL , headers = Headers );
+
+						JSON = json.loads(Response.text);
+
+						# 得到 Token
+						# "expires_in":3600
+						Token = JSON["token"];
+
+						# print(Response);
+						# print(Response.text);
+						# print(Response.headers);
+						# print(Token);
+
+
+
+
+						# 重新请求上传地址，获取上传入口
+
+						URL = "https://" + Server + "/v2/" + Name_Space + "/blobs/uploads/";
+
+						# WWW_Authenticate_Array[0].split(' ')[0] = "Bearer"
+						Authorization = WWW_Authenticate_Array[0].split(' ')[0] + " " + Token;
+
+
+						Headers = {
+							
+							"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+
+
+							"Authorization": Authorization,
+
+						}
+
+						Response = requests.post( url = URL , headers = Headers );
+
+						# print(Response);
+						# print(Response.text);
+						# print(Response.headers);
+
+
+
+
+
+						# 是当前传输任务的文件ID，可用于续传或取消/中止。
+						UUID = Response.headers["Docker-Upload-Uuid"];
+
+						# 下一步上传地址
+						Location = Response.headers["Location"];
+
+
+						# print("是否有http/https?");
+						# print(Location);
+
+
+
+
+
+						# 单次提交大小 5 M
+						LENGTH =  100 * 1024 * 1024;
+
+
+
+
+						# 计算需要上传多少次
+						# 文件大小/提交大小
+						TIMES = int( math.ceil( SIZE / LENGTH ) );
+
+
+
+						# 读入文件
+						File = open(File_Path, 'rb');
+
+
+
+
+
+
+						# 开始循环上传
+						for x in range(0,TIMES):
+
+
+
+
+
+							# 本次提交上传的数据
+							Temp_Data = bytes()
+
+
+
+							# 咬入/读入一段文件
+							Temp_Data += File.read( LENGTH );
+
+
+
+
+
+							Headers = {
+								"Content-Type": "application/octet-stream",
+								"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+								"Authorization": Authorization,
+								# "Docker-Upload-UUID":UUID,
+							}
+
+
+
+
+							# 如果是最后一次
+							if( int(x+1) == TIMES ):
+
+
+								# 最后一次提交上传时，需要用到的结束/结尾地址。
+								Location = Location + "&digest=sha256:" + SHA256;
+
+
+								#print(Location);
+
+								# 最后一次上传请求头
+								Headers["Content-Range"] = str( x * LENGTH ) + "-" + str( SIZE );
+
+								# 最后一次上传，使用 put
+								Response = requests.put( url = Location , data = Temp_Data , headers = Headers );
+
+								# 完成
+								#print("任务完成！")
+								#print(Response)
+								#print(Response.headers)
+								#print(Response.text)
+
+								pass
+
+							else:
+
+
+								# 当前提交的文件，所在源文件的段
+								Headers["Content-Range"] =  str( x * LENGTH ) + "-" + str( ( (x+1) * LENGTH ) -1 );
+
+
+								# 非最后一次上传，都使用 patch
+								Response = requests.patch( url = Location , data= Temp_Data , headers = Headers );
+
+
+								# 更新最新的上传地址
+								Location = Response.headers["Location"];
+
+								#print(Location);
+
+								# 继续
+								#print("继续上传！")
+								#print(Response)
+								#print(Response.headers)
+								#print(Response.text)
+
+
+
+
+
+							pass
+
+
+
+
+						try:
+							File.close();
+						except:
+							os.system('echo err 16');
+							pass
+
+
+
+
+
+
+						# print("已经替换 是否有http/https?");
+						# print(Location);
+						break;
+					# else:
+					except:
+
+						os.system('echo err 17');
+
+
+						try:
+							File.close();
+						except:
+
+							os.system('echo err 18');
+							pass
+
+						time.sleep(Get_Token_Error_Time);
+						Get_Token_Error_Time = Get_Token_Error_Time + 1;
+
+				# CURL = "curl -X PUT --data-binary '@blob' -H 'Content-Type: application/octet-stream' -H 'Authorization: " + Authorization + "' -H 'Docker-Upload-UUID: " + UUID + "' -A 'Docker-Client/19.03.8-ce (linux)' -H 'Content-Range: 0-" + str(SIZE) + "' '" + Location + "'";
+
+
+				# os.system(CURL);
+				CURL_Lock = False;
+
+
+
+
+
+
+
+
+			if int(ResponseJSON[x1]["DigitalOceanMirrorStatus"])<1:
+
+				os.system('echo do');
+
+				# Tree
+
+				# Docker
+				Docker = "registry.digitalocean.com/" + DigitalOceanDockerName;
+				Docker_Array = Docker.split('/');
+
+				# Server
+				Server = Docker_Array[0];
+
+				# 仓库地址
+				Name_Space = Docker_Array[1] + "/" + Docker_Array[2];
+
+				# 容器镜像服务登录密码
+				# 从华为云控制台获取
+				# https://console.huaweicloud.com/swr/?region=cn-south-1#/app/dashboard
+				# Base64_encode({Username}:{Password})
+				Basic_Auth = DigitalOcean_Basic_Auth;
+
+
+				# 先尝试请求上传，会得到服务器的 Headers 响应，告诉用户去哪个服务器请求 Token 值
+				URL = "https://" + Server + "/v2/" + Name_Space + "/blobs/uploads/" #  + SHA256;
+
+				Headers = {
+					"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+				}
+
+				while CURL_Lock == True:
+					time.sleep(random.randint(1,5));
+				CURL_Lock = True;
+
+
+				Get_Token_Error_Time = 0;
+				while True:
+					if Get_Token_Error_Time >= 10:
+
+
+						try:
+							File.close();
+						except:
+							os.system('echo err 15');
+							pass
+
+						2 + "2";
+					# if True:
+					try:
+						Response = requests.get( url = URL , headers = Headers );
+
+						# print(Response);
+						# print(Response.text);
+						# print(Response.headers);
+
+						# Response Headers:
+						# {'Date': 'Wed, 23 Jun 2021 18:38:04 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Content-Length': '61', 'Connection': 'keep-alive', 'Www-Authenticate': 'Bearer realm="https://swr.cn-south-1.myhuaweicloud.com/swr/auth/v2/registry/auth/",service="dockyard",scope="repository:object/tmp:pull"', 'Server': 'swrlb'}
+						# Response Text
+						# {"errors":[{"code":"DENIED","message":"Authenticate Error"}]}
+
+						WWW_Authenticate_Array = Response.headers["Www-Authenticate"].split('"');
+
+
+						# 先获取 Token
+
+						# URL
+						# "https://swr.cn-south-1.myhuaweicloud.com/swr/auth/v2/registry/auth/?service=dockyard&scope=repository:object/tmp:pull,push"
+						URL = WWW_Authenticate_Array[1] + "?service=" + WWW_Authenticate_Array[3] + "&scope=" + WWW_Authenticate_Array[5] + ",push";
+
+						# 模拟 Headers
+						Headers = {
+							"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+							"Authorization":"Basic " + Basic_Auth,
+						}
+
+						Response = requests.get( url = URL , headers = Headers );
+
+						JSON = json.loads(Response.text);
+
+						# 得到 Token
+						# "expires_in":3600
+						Token = JSON["token"];
+
+						# print(Response);
+						# print(Response.text);
+						# print(Response.headers);
+						# print(Token);
+
+
+
+
+						# 重新请求上传地址，获取上传入口
+
+						URL = "https://" + Server + "/v2/" + Name_Space + "/blobs/uploads/";
+
+						# WWW_Authenticate_Array[0].split(' ')[0] = "Bearer"
+						Authorization = WWW_Authenticate_Array[0].split(' ')[0] + " " + Token;
+
+
+						Headers = {
+							
+							"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+
+
+							"Authorization": Authorization,
+
+						}
+
+						Response = requests.post( url = URL , headers = Headers );
+
+						# print(Response);
+						# print(Response.text);
+						# print(Response.headers);
+
+
+
+
+
+						# 是当前传输任务的文件ID，可用于续传或取消/中止。
+						UUID = Response.headers["Docker-Upload-Uuid"];
+
+						# 下一步上传地址
+						Location = Response.headers["Location"];
+
+
+						# print("是否有http/https?");
+						# print(Location);
+
+
+
+
+
+						# 单次提交大小 5 M
+						LENGTH =  10 * 1024 * 1024;
+
+
+
+
+						# 计算需要上传多少次
+						# 文件大小/提交大小
+						TIMES = int( math.ceil( SIZE / LENGTH ) );
+
+
+
+						# 读入文件
+						File = open(File_Path, 'rb');
+
+
+
+
+
+
+						# 开始循环上传
+						for x in range(0,TIMES):
+
+
+
+
+
+							# 本次提交上传的数据
+							Temp_Data = bytes()
+
+
+
+							# 咬入/读入一段文件
+							Temp_Data += File.read( LENGTH );
+
+
+
+
+
+							Headers = {
+								"Content-Type": "application/octet-stream",
+								"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+								"Authorization": Authorization,
+								# "Docker-Upload-UUID":UUID,
+							}
+
+
+
+
+							# 如果是最后一次
+							if( int(x+1) == TIMES ):
+
+
+								# 最后一次提交上传时，需要用到的结束/结尾地址。
+								Location = Location + "&digest=sha256:" + SHA256;
+
+
+								#print(Location);
+
+								# 最后一次上传请求头
+								Headers["Content-Range"] = str( x * LENGTH ) + "-" + str( SIZE );
+
+								# 最后一次上传，使用 put
+								Response = requests.put( url = Location , data = Temp_Data , headers = Headers );
+
+								# 完成
+								#print("任务完成！")
+								#print(Response)
+								#print(Response.headers)
+								#print(Response.text)
+
+								pass
+
+							else:
+
+
+								# 当前提交的文件，所在源文件的段
+								Headers["Content-Range"] =  str( x * LENGTH ) + "-" + str( ( (x+1) * LENGTH ) -1 );
+
+
+								# 非最后一次上传，都使用 patch
+								Response = requests.patch( url = Location , data= Temp_Data , headers = Headers );
+
+
+								# 更新最新的上传地址
+								Location = Response.headers["Location"];
+
+								#print(Location);
+
+								# 继续
+								#print("继续上传！")
+								#print(Response)
+								#print(Response.headers)
+								#print(Response.text)
+
+
+
+
+
+							pass
+
+
+
+
+						try:
+							File.close();
+						except:
+							os.system('echo err 26');
+							pass
+
+
+
+
+
+
+						# print("已经替换 是否有http/https?");
+						# print(Location);
+						break;
+					# else:
+					except:
+
+						os.system('echo err 27');
+
+
+						try:
+							File.close();
+						except:
+
+							os.system('echo err 28');
+							pass
+
+						time.sleep(Get_Token_Error_Time);
+						Get_Token_Error_Time = Get_Token_Error_Time + 1;
+
+				# CURL = "curl -X PUT --data-binary '@blob' -H 'Content-Type: application/octet-stream' -H 'Authorization: " + Authorization + "' -H 'Docker-Upload-UUID: " + UUID + "' -A 'Docker-Client/19.03.8-ce (linux)' -H 'Content-Range: 0-" + str(SIZE) + "' '" + Location + "'";
+
+
+				# os.system(CURL);
+				CURL_Lock = False;
+
+
+
+
+
+
+
+
+
+			if int(ResponseJSON[x1]["QuayMirrorStatus"])<1:
+
+				os.system('echo q');
+
+
+				# Quay.io
+
+				# Docker
+				Docker = "quay.io/" + QuayDockerName;
+				Docker_Array = Docker.split('/');
+
+				# Server
+				Server = Docker_Array[0];
+
+				# 仓库地址
+				Name_Space = Docker_Array[1] + "/" + Docker_Array[2];
+
+				# 容器镜像服务登录密码
+				# 从华为云控制台获取
+				# https://console.huaweicloud.com/swr/?region=cn-south-1#/app/dashboard
+				# Base64_encode({Username}:{Password})
+				Basic_Auth = Quay_Basic_Auth;
+
+
+				# 先尝试请求上传，会得到服务器的 Headers 响应，告诉用户去哪个服务器请求 Token 值
+				URL = "https://" + Server + "/v2/" + Name_Space + "/blobs/uploads/" #  + SHA256;
+
+				Headers = {
+					"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+				}
+
+				while CURL_Lock == True:
+					time.sleep(random.randint(1,5));
+				CURL_Lock = True;
+
+
+				Get_Token_Error_Time = 0;
+				while True:
+					if Get_Token_Error_Time >= 10:
+						2 + "2";
+					# if True:
+					try:
+						Response = requests.post( url = URL , headers = Headers );
+
+						# print(Response);
+						# print(Response.text);
+						# print(Response.headers);
+
+						# Response Headers:
+						# {'Date': 'Wed, 23 Jun 2021 18:38:04 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Content-Length': '61', 'Connection': 'keep-alive', 'Www-Authenticate': 'Bearer realm="https://swr.cn-south-1.myhuaweicloud.com/swr/auth/v2/registry/auth/",service="dockyard",scope="repository:object/tmp:pull"', 'Server': 'swrlb'}
+						# Response Text
+						# {"errors":[{"code":"DENIED","message":"Authenticate Error"}]}
+
+						WWW_Authenticate_Array = Response.headers["Www-Authenticate"].split('"');
+
+
+						# 先获取 Token
+
+						# URL
+						# "https://swr.cn-south-1.myhuaweicloud.com/swr/auth/v2/registry/auth/?service=dockyard&scope=repository:object/tmp:pull,push"
+						URL = WWW_Authenticate_Array[1] + "?service=" + WWW_Authenticate_Array[3] + "&scope=" + WWW_Authenticate_Array[5] + ",push";
+
+						# 模拟 Headers
+						Headers = {
+							"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+							"Authorization":"Basic " + Basic_Auth,
+						}
+
+						Response = requests.get( url = URL , headers = Headers );
+
+						JSON = json.loads(Response.text);
+
+						# 得到 Token
+						# "expires_in":3600
+						Token = JSON["token"];
+
+						# print(Response);
+						# print(Response.text);
+						# print(Response.headers);
+						# print(Token);
+
+
+
+
+						# 重新请求上传地址，获取上传入口
+
+						URL = "https://" + Server + "/v2/" + Name_Space + "/blobs/uploads/";
+
+						# WWW_Authenticate_Array[0].split(' ')[0] = "Bearer"
+						Authorization = WWW_Authenticate_Array[0].split(' ')[0] + " " + Token;
+
+
+						Headers = {
+							
+							"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+
+
+							"Authorization": Authorization,
+
+						}
+
+						Response = requests.post( url = URL , headers = Headers );
+
+						# print(Response);
+						# print(Response.text);
+						# print(Response.headers);
+
+
+
+
+
+						# 是当前传输任务的文件ID，可用于续传或取消/中止。
+						UUID = Response.headers["Docker-Upload-Uuid"];
+
+						# 下一步上传地址
+						Location = Response.headers["Location"];
+
+
+						# print("是否有http/https?");
+						# print(Location);
+
+
+						Location = Location + "?digest=sha256:" + SHA256;
+
+
+
+						# print("已经替换 是否有http/https?");
+						# print(Location);
+						break;
+					# else:
+					except:
+						os.system('echo err 19');
+						time.sleep(Get_Token_Error_Time);
+						Get_Token_Error_Time = Get_Token_Error_Time + 1;
+
+				CURL = "curl -X PUT --data-binary '@blob' -H 'Content-Type: application/octet-stream' -H 'Authorization: " + Authorization + "' -H 'Docker-Upload-UUID: " + UUID + "' -A 'Docker-Client/19.03.8-ce (linux)' -H 'Content-Range: 0-" + str(SIZE) + "' '" + Location + "'";
+
+				CURL_Error_Times_Max = 10;
+				CURL_Error_Times_Now = 0;
+				CURL_Result = -1;
+				while CURL_Error_Times_Now < CURL_Error_Times_Max:
+					CURL_Error_Times_Now = CURL_Error_Times_Now + 1;
+					CURL_Result = os.system(CURL);
+					# ######os.system('echo "err 29 code ' + str(CURL_Result) + '"');
+					if CURL_Result == 0 or CURL_Result == 13312:
+						break;
+					continue;
+				if CURL_Result != 0 and CURL_Result != 13312:
+					continue;
+				CURL_Lock = False;
+
+
+
+
+
+
+
+
+			if int(ResponseJSON[x1]["HerokuUsMirrorStatus"])<1:
+
+				os.system('echo h-u');
+				# Heroku us
+
+				# Docker
+				# index.docker.io
+				# registry-1.docker.io
+				Docker = "registry.heroku.com/" + HerokuUsDockerName;
+				Docker_Array = Docker.split('/');
+
+				# Server
+				Server = Docker_Array[0];
+
+				# 仓库地址
+				Name_Space = Docker_Array[1];
+
+				# 容器镜像服务登录密码
+				# 从华为云控制台获取
+				# https://console.huaweicloud.com/swr/?region=cn-south-1#/app/dashboard
+				# Base64_encode({Username}:{Password})
+				Basic_Auth = HerokuUs_Basic_Auth;
+
+				Authorization = "Basic " + Basic_Auth;
+
+
+				# 先尝试请求上传，会得到服务器的 Headers 响应，告诉用户去哪个服务器请求 Token 值
+				URL = "https://" + Server + "/v2/" + Name_Space + "/blobs/uploads/" #  + SHA256;
+
+				Headers = {
+					"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+					"Authorization":Authorization,
+				}
+
+				while CURL_Lock == True:
+					time.sleep(random.randint(1,5));
+				CURL_Lock = True;
+
+
+				Get_Token_Error_Time = 0;
+				while True:
+					if Get_Token_Error_Time >= 10:
+						2 + "2";
+					# if True:
+					try:
+						Response = requests.post( url = URL , headers = Headers );
+
+						# print(Response);
+						# print(Response.text);
+						# print(Response.headers);
+
+						# Response Headers:
+						# {'Date': 'Wed, 23 Jun 2021 18:38:04 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Content-Length': '61', 'Connection': 'keep-alive', 'Www-Authenticate': 'Bearer realm="https://swr.cn-south-1.myhuaweicloud.com/swr/auth/v2/registry/auth/",service="dockyard",scope="repository:object/tmp:pull"', 'Server': 'swrlb'}
+						# Response Text
+						# {"errors":[{"code":"DENIED","message":"Authenticate Error"}]}
+
+						# WWW_Authenticate_Array = Response.headers["Www-Authenticate"].split('"');
+
+
+						# 先获取 Token
+
+						# URL
+						# "https://swr.cn-south-1.myhuaweicloud.com/swr/auth/v2/registry/auth/?service=dockyard&scope=repository:object/tmp:pull,push"
+						# URL = WWW_Authenticate_Array[1] + "?service=" + WWW_Authenticate_Array[3] + "&scope=" + WWW_Authenticate_Array[5] + ",push";
+
+						# 模拟 Headers
+						# Headers = {
+						#	"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+						#	"Authorization":"Basic " + Basic_Auth,
+						# }
+
+						# Response = requests.get( url = URL , headers = Headers );
+
+						# JSON = json.loads(Response.text);
+
+						# 得到 Token
+						# "expires_in":3600
+						# Token = JSON["token"];
+
+						# print(Response);
+						# print(Response.text);
+						# print(Response.headers);
+						# print(Token);
+
+
+
+
+						# 重新请求上传地址，获取上传入口
+
+						# URL = "https://" + Server + "/v2/" + Name_Space + "/blobs/uploads/";
+
+						# WWW_Authenticate_Array[0].split(' ')[0] = "Bearer"
+						# Authorization = WWW_Authenticate_Array[0].split(' ')[0] + " " + Token;
+
+
+						# Headers = {
+							
+						#	"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+
+
+						#	"Authorization": Authorization,
+
+						# }
+
+						# Response = requests.post( url = URL , headers = Headers );
+
+						# print(Response);
+						# print(Response.text);
+						# print(Response.headers);
+
+
+
+
+
+						# 是当前传输任务的文件ID，可用于续传或取消/中止。
+						UUID = Response.headers["Docker-Upload-Uuid"];
+
+						# 下一步上传地址
+						Location = Response.headers["Location"];
+
+
+						# print("是否有http/https?");
+						# print(Location);
+
+
+						Location = Location + "&digest=sha256:" + SHA256;
+
+
+
+						# print("已经替换 是否有http/https?");
+						# print(Location);
+						break;
+					# else:
+					except:
+						os.system('echo err 20');
+						time.sleep(Get_Token_Error_Time);
+						Get_Token_Error_Time = Get_Token_Error_Time + 1;
+
+				CURL = "curl -X PUT --data-binary '@blob' -H 'Content-Type: application/octet-stream' -H 'Authorization: " + Authorization + "' -H 'Docker-Upload-UUID: " + UUID + "' -A 'Docker-Client/19.03.8-ce (linux)' -H 'Content-Range: 0-" + str(SIZE) + "' '" + Location + "'";
+
+				CURL_Error_Times_Max = 10;
+				CURL_Error_Times_Now = 0;
+				CURL_Result = -1;
+				while CURL_Error_Times_Now < CURL_Error_Times_Max:
+					CURL_Error_Times_Now = CURL_Error_Times_Now + 1;
+					CURL_Result = os.system(CURL);
+					# ######os.system('echo "err 29 code ' + str(CURL_Result) + '"');
+					if CURL_Result == 0 or CURL_Result == 13312:
+						break;
+					continue;
+				if CURL_Result != 0 and CURL_Result != 13312:
+					continue;
+				CURL_Lock = False;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			if int(ResponseJSON[x1]["HerokuEuMirrorStatus"])<1:
+
+				os.system('echo h-e');
+				# Heroku us
+
+				# Docker
+				# index.docker.io
+				# registry-1.docker.io
+				Docker = "registry.heroku.com/" + HerokuEuDockerName;
+				Docker_Array = Docker.split('/');
+
+				# Server
+				Server = Docker_Array[0];
+
+				# 仓库地址
+				Name_Space = Docker_Array[1];
+
+				# 容器镜像服务登录密码
+				# 从华为云控制台获取
+				# https://console.huaweicloud.com/swr/?region=cn-south-1#/app/dashboard
+				# Base64_encode({Username}:{Password})
+				Basic_Auth = HerokuEu_Basic_Auth;
+
+				Authorization = "Basic " + Basic_Auth;
+
+
+				# 先尝试请求上传，会得到服务器的 Headers 响应，告诉用户去哪个服务器请求 Token 值
+				URL = "https://" + Server + "/v2/" + Name_Space + "/blobs/uploads/" #  + SHA256;
+
+				Headers = {
+					"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+					"Authorization":Authorization,
+				}
+
+				while CURL_Lock == True:
+					time.sleep(random.randint(1,5));
+				CURL_Lock = True;
+
+
+				Get_Token_Error_Time = 0;
+				while True:
+					if Get_Token_Error_Time >= 10:
+						2 + "2";
+					# if True:
+					try:
+						Response = requests.post( url = URL , headers = Headers );
+
+						# print(Response);
+						# print(Response.text);
+						# print(Response.headers);
+
+						# Response Headers:
+						# {'Date': 'Wed, 23 Jun 2021 18:38:04 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Content-Length': '61', 'Connection': 'keep-alive', 'Www-Authenticate': 'Bearer realm="https://swr.cn-south-1.myhuaweicloud.com/swr/auth/v2/registry/auth/",service="dockyard",scope="repository:object/tmp:pull"', 'Server': 'swrlb'}
+						# Response Text
+						# {"errors":[{"code":"DENIED","message":"Authenticate Error"}]}
+
+						# WWW_Authenticate_Array = Response.headers["Www-Authenticate"].split('"');
+
+
+						# 先获取 Token
+
+						# URL
+						# "https://swr.cn-south-1.myhuaweicloud.com/swr/auth/v2/registry/auth/?service=dockyard&scope=repository:object/tmp:pull,push"
+						# URL = WWW_Authenticate_Array[1] + "?service=" + WWW_Authenticate_Array[3] + "&scope=" + WWW_Authenticate_Array[5] + ",push";
+
+						# 模拟 Headers
+						# Headers = {
+						#	"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+						#	"Authorization":"Basic " + Basic_Auth,
+						# }
+
+						# Response = requests.get( url = URL , headers = Headers );
+
+						# JSON = json.loads(Response.text);
+
+						# 得到 Token
+						# "expires_in":3600
+						# Token = JSON["token"];
+
+						# print(Response);
+						# print(Response.text);
+						# print(Response.headers);
+						# print(Token);
+
+
+
+
+						# 重新请求上传地址，获取上传入口
+
+						# URL = "https://" + Server + "/v2/" + Name_Space + "/blobs/uploads/";
+
+						# WWW_Authenticate_Array[0].split(' ')[0] = "Bearer"
+						# Authorization = WWW_Authenticate_Array[0].split(' ')[0] + " " + Token;
+
+
+						# Headers = {
+							
+						#	"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+
+
+						#	"Authorization": Authorization,
+
+						# }
+
+						# Response = requests.post( url = URL , headers = Headers );
+
+						# print(Response);
+						# print(Response.text);
+						# print(Response.headers);
+
+
+
+
+
+						# 是当前传输任务的文件ID，可用于续传或取消/中止。
+						UUID = Response.headers["Docker-Upload-Uuid"];
+
+						# 下一步上传地址
+						Location = Response.headers["Location"];
+
+
+						# print("是否有http/https?");
+						# print(Location);
+
+
+						Location = Location + "&digest=sha256:" + SHA256;
+
+
+
+						# print("已经替换 是否有http/https?");
+						# print(Location);
+						break;
+					# else:
+					except:
+						os.system('echo err 21');
+						time.sleep(Get_Token_Error_Time);
+						Get_Token_Error_Time = Get_Token_Error_Time + 1;
+
+				CURL = "curl -X PUT --data-binary '@blob' -H 'Content-Type: application/octet-stream' -H 'Authorization: " + Authorization + "' -H 'Docker-Upload-UUID: " + UUID + "' -A 'Docker-Client/19.03.8-ce (linux)' -H 'Content-Range: 0-" + str(SIZE) + "' '" + Location + "'";
+
+				CURL_Error_Times_Max = 10;
+				CURL_Error_Times_Now = 0;
+				CURL_Result = -1;
+				while CURL_Error_Times_Now < CURL_Error_Times_Max:
+					CURL_Error_Times_Now = CURL_Error_Times_Now + 1;
+					CURL_Result = os.system(CURL);
+					# ######os.system('echo "err 29 code ' + str(CURL_Result) + '"');
+					if CURL_Result == 0 or CURL_Result == 13312:
+						break;
+					continue;
+				if CURL_Result != 0 and CURL_Result != 13312:
+					continue;
+				CURL_Lock = False;
+
+
+
+
+
+
+
+			if int(ResponseJSON[x1]["AzureUSMirrorStatus"])<1:
+
+				os.system('echo a-u');
+				# Heroku us
+
+				# Docker
+				# index.docker.io
+				# registry-1.docker.io
+				Docker = "yunzhongzhuan.azurecr.io/" + AzureUSDockerName;
+				Docker_Array = Docker.split('/');
+
+				# Server
+				Server = Docker_Array[0];
+
+				# 仓库地址
+				Name_Space = Docker_Array[1];
+
+				# 容器镜像服务登录密码
+				# 从华为云控制台获取
+				# https://console.huaweicloud.com/swr/?region=cn-south-1#/app/dashboard
+				# Base64_encode({Username}:{Password})
+				Basic_Auth = AzureUS_Basic_Auth;
+
+				Authorization = "Basic " + Basic_Auth;
+
+
+				# 先尝试请求上传，会得到服务器的 Headers 响应，告诉用户去哪个服务器请求 Token 值
+				URL = "https://" + Server + "/v2/" + Name_Space + "/blobs/uploads/" #  + SHA256;
+
+				Headers = {
+					"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+					# "Authorization":Authorization,
+				}
+
+				while CURL_Lock == True:
+					time.sleep(random.randint(1,5));
+				CURL_Lock = True;
+
+
+				Get_Token_Error_Time = 0;
+				while True:
+					if Get_Token_Error_Time >= 10:
+						2 + "2";
+					# if True:
+					try:
+						Response = requests.get( url = URL , headers = Headers );
+
+						# print(Response);
+						# print(Response.text);
+						# print(Response.headers);
+
+						# Response Headers:
+						# {'Date': 'Wed, 23 Jun 2021 18:38:04 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Content-Length': '61', 'Connection': 'keep-alive', 'Www-Authenticate': 'Bearer realm="https://swr.cn-south-1.myhuaweicloud.com/swr/auth/v2/registry/auth/",service="dockyard",scope="repository:object/tmp:pull"', 'Server': 'swrlb'}
+						# Response Text
+						# {"errors":[{"code":"DENIED","message":"Authenticate Error"}]}
+
+						WWW_Authenticate_Array = Response.headers["Www-Authenticate"].split('"');
+
+
+						# 先获取 Token
+
+						# URL
+						# "https://swr.cn-south-1.myhuaweicloud.com/swr/auth/v2/registry/auth/?service=dockyard&scope=repository:object/tmp:pull,push"
+						URL = WWW_Authenticate_Array[1] + "?service=" + WWW_Authenticate_Array[3] + "&scope=" + WWW_Authenticate_Array[5] + ",push";
+
+						# 模拟 Headers
+						Headers = {
+							"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+							"Authorization":"Basic " + Basic_Auth,
+						}
+
+						Response = requests.get( url = URL , headers = Headers );
+
+						JSON = json.loads(Response.text);
+
+						# 得到 Token
+						# "expires_in":3600
+						Token = JSON["access_token"];
+
+						# print(Response);
+						# print(Response.text);
+						# print(Response.headers);
+						# print(Token);
+
+
+
+
+						# 重新请求上传地址，获取上传入口
+
+						URL = "https://" + Server + "/v2/" + Name_Space + "/blobs/uploads/";
+
+						WWW_Authenticate_Array[0].split(' ')[0] = "Bearer"
+						# Authorization = WWW_Authenticate_Array[0].split(' ')[0] + " " + Token;
+
+
+						Headers = {
+							
+							"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+
+
+							"Authorization": Authorization,
+
+						}
+
+						Response = requests.post( url = URL , headers = Headers );
+
+						# print(Response);
+						# print(Response.text);
+						# print(Response.headers);
+
+
+
+
+
+						# 是当前传输任务的文件ID，可用于续传或取消/中止。
+						UUID = Response.headers["Docker-Upload-Uuid"];
+
+						# 下一步上传地址
+						Location = "https://" + Server + Response.headers["Location"] + "&digest=sha256:" + SHA256;
+
+
+						# print("是否有http/https?");
+						# print(Location);
+
+
+						# Location = Location
+
+
+
+						# print("已经替换 是否有http/https?");
+						# print(Location);
+						break;
+					# else:
+					except:
+						os.system('echo err 25');
+						time.sleep(Get_Token_Error_Time);
+						Get_Token_Error_Time = Get_Token_Error_Time + 1;
+
+				CURL = "curl -X PUT --data-binary '@blob' -H 'Content-Type: application/octet-stream' -H 'Authorization: " + Authorization + "' -H 'Docker-Upload-UUID: " + UUID + "' -A 'Docker-Client/19.03.8-ce (linux)' '" + Location + "'";
+
+				CURL_Error_Times_Max = 10;
+				CURL_Error_Times_Now = 0;
+				CURL_Result = -1;
+				while CURL_Error_Times_Now < CURL_Error_Times_Max:
+					CURL_Error_Times_Now = CURL_Error_Times_Now + 1;
+					CURL_Result = os.system(CURL);
+					# ######os.system('echo "err 29 code ' + str(CURL_Result) + '"');
+					if CURL_Result == 0 or CURL_Result == 13312:
+						break;
+					continue;
+				if CURL_Result != 0 and CURL_Result != 13312:
+					continue;
+				CURL_Lock = False;
+
+
+
+
+
+
+
+
+
+
+
+			AWS_Public_Download_URL = "";
+
+
+			if int(ResponseJSON[x1]["AWSECRPublicMirrorStatus"])<1:
+
+				os.system('echo awsecrpublic');
+				# Heroku us
+
+				# Docker
+				# index.docker.io
+				# registry-1.docker.io
+				Docker = "public.ecr.aws/" + AWSDockerName;
+				Docker_Array = Docker.split('/');
+
+				# Server
+				Server = Docker_Array[0];
+
+				# 仓库地址
+				Name_Space = Docker_Array[1] + "/" + Docker_Array[2];
+
+				# 容器镜像服务登录密码
+				# 从华为云控制台获取
+				# https://console.huaweicloud.com/swr/?region=cn-south-1#/app/dashboard
+				# Base64_encode({Username}:{Password})
+
+
+
+
+				
+
+				while CURL_Lock == True:
+					time.sleep(random.randint(1,5));
+				CURL_Lock = True;
+
+
+				Get_Token_Error_Time = 0;
+				while True:
+					if Get_Token_Error_Time >= 10:
+						2 + "2";
+					# if True:
+					try:
+
+
+
+
+						# 先尝试请求上传，会得到服务器的 Headers 响应，告诉用户去哪个服务器请求 Token 值
+						URL = "https://" + Server + "/v2/" + Name_Space + "/blobs/uploads/";
+
+						Headers = {
+							"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+						}
+
+						Response = requests.post( url = URL , headers = Headers );
+
+
+						# print('awsecrpe1');
+						# print(Response);
+						# print(Response.text);
+						# ######os.system('echo awsecrpe1');
+						# ######os.system('echo ' + Response.text);
+						# print(Response.headers);
+
+						WWW_Authenticate_Array = Response.headers["Www-Authenticate"].split('"');
+
+						URL = WWW_Authenticate_Array[1] + "?service=" + WWW_Authenticate_Array[3] + "&scope=" + WWW_Authenticate_Array[5];
+
+						Basic_Auth = AWS_Basic_Auth;
+
+						Basic_Auth = str(base64.b64encode(('AWS:'+Basic_Auth).encode('utf-8')),'utf-8');
+
+						Authorization = "Basic " + Basic_Auth;
+
+						# 模拟 Headers
+						Headers = {
+							"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+							"Authorization":Authorization,
+						}
+
+						# ######os.system('echo "' + Authorization + '"');
+
+						# ######os.system('echo "' + URL + '"');
+
+						Response = requests.get( url = URL , headers = Headers );
+
+						# ######os.system('echo "ok -- > ' + URL + '"');
+
+						# print('awsecrpe2');
+						# print(Response);
+						# print(Response.text);
+						# ######os.system('echo awsecrpe2');
+						# ######os.system('echo ' + Response.text);
+						# print(Response.headers);
+
+						JSON = json.loads(Response.text);
+
+						Token = JSON["token"];
+
+						# ######os.system('echo "' + Token + '"');
+
+						Authorization = WWW_Authenticate_Array[0].split(' ')[0] + " " + Token;
+
+						# 先尝试请求上传，会得到服务器的 Headers 响应，告诉用户去哪个服务器请求 Token 值
+						URL = "https://" + Server + "/v2/" + Name_Space + "/blobs/uploads/";
+
+						Headers = {
+							
+							"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+							"Authorization":Authorization,
+
+						}
+
+						Response = requests.post( url = URL , headers = Headers );
+
+						# print('awsecrpe3');
+						# print(Response);
+						# print(Response.text);
+						# ######os.system('echo awsecrpe3');
+						# ######os.system('echo ' + Response.text);
+						# print(Response.headers);
+
+						# Response Headers:
+						# {'Date': 'Wed, 23 Jun 2021 18:38:04 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Content-Length': '61', 'Connection': 'keep-alive', 'Www-Authenticate': 'Bearer realm="https://swr.cn-south-1.myhuaweicloud.com/swr/auth/v2/registry/auth/",service="dockyard",scope="repository:object/tmp:pull"', 'Server': 'swrlb'}
+						# Response Text
+						# {"errors":[{"code":"DENIED","message":"Authenticate Error"}]}
+
+						# WWW_Authenticate_Array = Response.headers["Www-Authenticate"].split('"');
+
+
+						# 先获取 Token
+
+						# URL
+						# "https://swr.cn-south-1.myhuaweicloud.com/swr/auth/v2/registry/auth/?service=dockyard&scope=repository:object/tmp:pull,push"
+						# URL = WWW_Authenticate_Array[1] + "?service=" + WWW_Authenticate_Array[3] + "&scope=" + WWW_Authenticate_Array[5] + ",push";
+
+						# 模拟 Headers
+						# Headers = {
+						#	"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+						#	"Authorization":"Basic " + Basic_Auth,
+						# }
+
+						# Response = requests.get( url = URL , headers = Headers );
+
+						# JSON = json.loads(Response.text);
+
+						# 得到 Token
+						# "expires_in":3600
+						# Token = JSON["token"];
+
+						# print(Response);
+						# print(Response.text);
+						# print(Response.headers);
+						# print(Token);
+
+
+
+
+						# 重新请求上传地址，获取上传入口
+
+						# URL = "https://" + Server + "/v2/" + Name_Space + "/blobs/uploads/";
+
+						# WWW_Authenticate_Array[0].split(' ')[0] = "Bearer"
+						# Authorization = WWW_Authenticate_Array[0].split(' ')[0] + " " + Token;
+
+
+						# Headers = {
+							
+						#	"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+
+
+						#	"Authorization": Authorization,
+
+						# }
+
+						# Response = requests.post( url = URL , headers = Headers );
+
+						# print(Response);
+						# print(Response.text);
+						# print(Response.headers);
+
+
+
+						# 是当前传输任务的文件ID，可用于续传或取消/中止。
+						# UUID = Response.headers["Docker-Upload-Uuid"];
+
+						# 下一步上传地址
+						Location = Response.headers["Location"] + "?digest=sha256:" + SHA256;
+
+
+						# print("是否有http/https?");
+						# print(Location);
+
+
+						
+
+
+
+						# print("已经替换 是否有http/https?");
+						# print(Location);
+						break;
+					# else:
+					except:
+						os.system('echo err 24');
+						update_aws_public_token(1); # update aws ecr public token
+						time.sleep(Get_Token_Error_Time);
+						Get_Token_Error_Time = Get_Token_Error_Time + 1;
+
+				CURL = "curl -X PUT --data-binary '@blob' -H 'Content-Type: application/octet-stream' -H 'Authorization: " + Authorization + "' -A 'Docker-Client/19.03.8-ce (linux)' -H 'Content-Range: 0-" + str(SIZE) + "' '" + Location + "'";
+				CURL_Error_Times_Max = 10;
+				CURL_Error_Times_Now = 0;
+				CURL_Result = -1;
+				while CURL_Error_Times_Now < CURL_Error_Times_Max:
+					CURL_Error_Times_Now = CURL_Error_Times_Now + 1;
+					CURL_Result = os.system(CURL);
+					# ######os.system('echo "err 29 code ' + str(CURL_Result) + '"');
+					if CURL_Result == 0 or CURL_Result == 13312:
+						break;
+					continue;
+				if CURL_Result != 0 and CURL_Result != 13312:
+					continue;
+
+
+				# 伪造 manifest.json
+				os.system('''cd
+rm hello-world.manifest.json
+aws ecr-public batch-delete-image --region us-east-1 --repository-name yunzhongzhuan --image-ids imageTag=2019.08
+echo '{"schemaVersion": 2,"mediaType": "application/vnd.docker.distribution.manifest.v2+json","config": {"mediaType": "application/vnd.docker.container.image.v1+json","size": 21504,"digest": "sha256:'''+SHA256+'''"},"layers": [{"mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip","size": 21504,"digest": "sha256:'''+SHA256+'''"}]}' > hello-world.manifest.json
+aws ecr-public put-image --region us-east-1 --repository-name yunzhongzhuan --image-tag 2019.08 --image-manifest file://hello-world.manifest.json
+# curl -X HEAD https://public.ecr.aws/v2/'''+AWSDockerName+'''/blobs/sha256:'''+SHA256+'''
+# curl -X GET -H '' https://public.ecr.aws/v2/'''+AWSDockerName+'''/blobs/sha256:'''+SHA256+'''
+# echo ok
+''');
+				time.sleep(2);
+
+				os.system('''cd
+rm hello-world.manifest.json
+aws ecr-public batch-delete-image --region us-east-1 --repository-name yunzhongzhuan --image-ids imageTag=2019.08''');
+
+
+
+
+				# public 下载的！
+				# aws ecr get-download-url-for-layer --region ap-east-1 --repository-name yunzhongzhuan --layer-digest sha256:42bacdb5a8c53b01fb828b0ade8947ff11489e5a423c5269ffcf450ba3ba81a7
+				# https://public.ecr.aws/v2/x3p9i2a4/yunzhongzhuan/blobs/sha256:cd427c7b17337d7c13761ca20877d2d8be661bd30415ddc17072a31a65a91b64
+				# aws ecr-public get-download-url-for-layer --region us-east-1 --repository-name yunzhongzhuan --layer-digest sha256:42bacdb5a8c53b01fb828b0ade8947ff11489e5a423c5269ffcf450ba3ba81a7
+				# Docker
+				# index.docker.io
+				# registry-1.docker.io
+				Docker = "public.ecr.aws/"+AWSDockerName;
+				Docker_Array = Docker.split('/');
+
+				# Server
+				Server = Docker_Array[0];
+
+				# 仓库地址
+				Name_Space = Docker_Array[1] + "/" + Docker_Array[2];
+
+
+				# 要下载的文件 SHA256 值
+				# SHA256 = "bd7b4cd28fcc1f62badcd21382b4d46f43ca3ada417449822fa91971cb39f7e0";
+
+				# SHA256 = input('hash:');
+
+
+
+
+
+
+				# 先尝试请求上传，会得到服务器的 Headers 响应，告诉用户去哪个服务器请求 Token 值
+
+
+
+				URL = "https://" + Server + "/v2/" + Name_Space + "/blobs/uploads/";
+
+				Headers = {
+					
+					"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+
+				}
+
+				try:
+					Response = requests.get( url = URL , headers = Headers );
+				except:
+					OutlineStop = True;
+					UploadStop = True;
+					Stop = True;
+					Break;
+
+				# print(Response);
+				# print(Response.text);
+				# print(Response.headers);
+
+				# Response Headers:
+				# {'Date': 'Wed, 23 Jun 2021 18:38:04 GMT', 'Content-Type': 'application/json;charset=UTF-8', 'Content-Length': '61', 'Connection': 'keep-alive', 'Www-Authenticate': 'Bearer realm="https://swr.cn-south-1.myhuaweicloud.com/swr/auth/v2/registry/auth/",service="dockyard",scope="repository:object/tmp:pull"', 'Server': 'swrlb'}
+				# Response Text
+				# {"errors":[{"code":"DENIED","message":"Authenticate Error"}]}
+
+				WWW_Authenticate_Array = Response.headers["Www-Authenticate"].split('"');
+
+
+
+
+
+
+
+
+
+
+
+
+				# 先获取 Token
+
+				# URL
+				# "https://swr.cn-south-1.myhuaweicloud.com/swr/auth/v2/registry/auth/?service=dockyard&scope=repository:object/tmp:pull"
+				URL = WWW_Authenticate_Array[1] + "?service=" + WWW_Authenticate_Array[3] + "&scope=" + WWW_Authenticate_Array[5];
+
+
+				# 模拟 Headers
+				Headers = {
+					"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+				}
+
+				try:
+					Response = requests.get( url = URL , headers = Headers );
+				except:
+					OutlineStop = True;
+					UploadStop = True;
+					Stop = True;
+					try:
+						break;
+					except:
+						try:
+							continue;
+						except:
+							pass;
+						pass
+
+				JSON = json.loads(Response.text);
+
+				# print(Response);
+				# print(Response.text);
+				# print(Response.headers);
+
+
+				# 得到 Token
+				# "expires_in":3600
+				Token = JSON["token"];
+
+
+				# print(Token);
+
+
+				# WWW_Authenticate_Array[0].split(' ')[0] = "Bearer"
+				Authorization = WWW_Authenticate_Array[0].split(' ')[0] + " " + Token;
+				# print(Authorization)
+
+
+
+
+
+
+
+
+				# 凭借 Token 获取下载地址
+
+
+				#指定提交的是json
+				Headers = {
+
+					"Authorization":Authorization,
+
+				}
+
+
+				# URL
+
+				URL = "https://" + Server + "/v2/" + Name_Space + "/blobs/sha256:" + SHA256;
+
+				try:
+					Response = requests.get( url = URL , headers = Headers , allow_redirects = False );
+				except:
+					OutlineStop = True;
+					UploadStop = True;
+					Stop = True;
+					try:
+						break;
+					except:
+						try:
+							continue;
+						except:
+							pass;
+						pass
+
+
+				# print(Response);
+				# print(Response.text);
+				# print(Response.headers);
+
+
+				# 获得下载地址
+				Location = Response.headers["Location"];
+				Location = Location.split('?')[0];
+				Location = Location.split('://')[1];
+				# print('\n');
+				# print("下载地址：" + Location)
+
+
+				AWS_Public_Download_URL = Location;
+
+
+				
+				CURL_Lock = False;
+
+
+
+
+
+
+
+
+
+
+
+
+			# 告诉服务器我备份完成了
+			URL = "https://apiyunzhongzhuancom.vercel.app/php/temp/gpr/ok?size="+str(SIZE)+"&id="+str(ResponseJSON[x1]["ID"])+"&hash="+ResponseJSON[x1]["DockerFileSHA256"]+"&status=200&ghdn="+GithubDockerName+"&gldn="+GitlabDockerName+"&qdn="+QuayDockerName+"&bfcvdn="+BizflyCloudVNDockerName+"&tdn="+TreeDockerName+"&hudn="+HerokuUsDockerName+"&hedn="+HerokuEuDockerName+"&odn="+OktetoDockerName+"&awsecrpdn="+AWSDockerName+"&adn="+AzureUSDockerName+"&dodn="+DigitalOceanDockerName+"&apdu="+AWS_Public_Download_URL;
+
+			# ######os.system('echo "' + URL + '"');
+
+			# 完成 告诉服务器 我已经完成 从 docker 推送到 github
+			Send_OK_Times_Max = 10;
+			Send_OK_Times_Now = 0;
+			while Send_OK_Times_Now < Send_OK_Times_Max:
+				try:
+					Response = requests.get(url=URL);
+					Send_OK_Times_Now = 20;
+
+					try:
+						os.remove(File_Path);
+					except:
+						os.system('echo err 22');
+						pass
+
+				except:
+					Send_OK_Times_Now = Send_OK_Times_Now + 1;
+					if Send_OK_Times_Now == Send_OK_Times_Max:
+						Stop == True;
+						break;
+					pass
+
+			# ######os.system('echo "' + URL + '"');
+
+			if Send_OK_Times_Now == Send_OK_Times_Max:
+				continue;
+
+
+
+			continue;
+
+
+			# 计算需要上传多少次
+			# 文件大小/提交大小
+			TIMES = int( math.ceil( SIZE / LENGTH ) );
+
+
+
+			# 读入文件
+			File = open(File_Path, 'rb');
+
+
+
+
+
+
+			# 开始循环上传
+			for x2 in range(0,TIMES):
+
+
+
+
+
+				# 本次提交上传的数据
+				Temp_Data = bytes()
+
+
+
+				# 咬入/读入一段文件
+				Temp_Data += File.read( LENGTH );
+
+
+
+
+
+				Headers = {
+					"Content-Type": "application/octet-stream",
+					"User-Agent":"Docker-Client/19.03.8-ce (linux)",
+					"Authorization": Authorization,
+					"Docker-Upload-UUID":UUID,
+				}
+
+
+
+
+				# 如果是最后一次
+				if( int(x2+1) == TIMES ):
+
+
+					# 最后一次提交上传时，需要用到的结束/结尾地址。
+					Location = Location + "?digest=sha256:" + SHA256;
+
+					# print("最后一次 是否有http/https?");
+					# print(Location);
+
+					# 最后一次上传请求头
+					Headers["Content-Range"] = str( x2 * LENGTH ) + "-" + str( SIZE );
+
+					# 最后一次上传，使用 put
+					Response = requests.put( url = Location , data = Temp_Data , headers = Headers );
+
+					# 完成
+					# print("任务完成！")
+					# print(Response)
+					# print(Response.headers)
+					# print(Response.text)
+
+
+					# 告诉服务器我备份完成了
+					URL = "https://apiyunzhongzhuancom.vercel.app/php/temp/gpr/ok?id="+str(ResponseJSON[x1]["ID"])+"&hash="+ResponseJSON[x1]["DockerFileSHA256"];
+
+					# 完成 告诉服务器 我已经完成 从 docker 推送到 github
+					Response = requests.get(url=URL);
+
+
+
+
+				else:
+
+
+					# 当前提交的文件，所在源文件的段
+					Headers["Content-Range"] =  str( x2 * LENGTH ) + "-" + str( ( (x2+1) * LENGTH ) -1 );
+
+
+					# 非最后一次上传，都使用 patch
+					Response = requests.patch( url = Location , data= Temp_Data , headers = Headers );
+
+
+					# 更新最新的上传地址
+					Location =  "https://" + Server + Response.headers["Location"];
+
+					#print("继续提交 是否有http/https?");
+					# print(Location);
+
+					# 继续
+					# print("继续上传！")
+					# print(Response)
+					# print(Response.headers)
+					# print(Response.text)
+
+
+
+				Temp_Data = Bytes();
+
+
+
+			File.close();
+
+			try:
+				os.remove(File_Path);
+			except:
+				os.system('echo err 23');
+				pass
+
+
+		ResponseJSON = {};
+
+		time.sleep(1);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+_thread.start_new_thread( main, ( 1 ,) );
+
+
+
+while ( Exit != True ):
+	
+	time.sleep(1);
+
+time.sleep(10);
+
+1 + "1";
